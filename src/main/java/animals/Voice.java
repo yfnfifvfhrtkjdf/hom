@@ -1,6 +1,6 @@
 package animals;
 
-interface Voice {
+public interface Voice {
     void getVoice(Voice voice);
 
 }
