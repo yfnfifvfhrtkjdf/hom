@@ -13,7 +13,7 @@ public class Nosorog extends Herbivore implements Voice, Run {
     public void run() {
         int speed = 25;
         String k = "Километров в час";
-        System.out.println("Носорог бегает со скоростью " +speed + k);
+        System.out.println("Носорог бегает со скоростью " + speed + k);
     }
 
 
@@ -21,8 +21,5 @@ public class Nosorog extends Herbivore implements Voice, Run {
         //   voice="*НЕСРАВНИМЫЙ КРИК НОСОРОГА*";
         System.out.println("*НЕСРАВНИМЫЙ КРИК НОСОРОГА*");
     }
-    @Override
-    public boolean eat(Food food) {
-        return super.eat(food);
-    }
 }
+

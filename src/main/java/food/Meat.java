@@ -4,12 +4,11 @@ public class Meat extends  Food{
     @Override
     public int getEnergy(int energy) {
         System.out.println("Энергия травки: "+ energy);
-        return super.getEnergy(energy);
+        return energy;
     }
 
     @Override
-    public boolean meat() {
+    public void meat() {
         getEnergy(5);
-        return true;
     }
 }

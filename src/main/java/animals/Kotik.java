@@ -20,9 +20,6 @@ public class Kotik extends Carnivorous implements Voice, Run {
         System.out.println("MEOW");
     }
 
-    @Override
-    public boolean eat(Food food) {
-        return super.eat(food);
-    }
+
 
 }

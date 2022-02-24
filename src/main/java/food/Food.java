@@ -4,7 +4,7 @@ public abstract class Food {
     public int getEnergy(int energy) {
         return energy;
     }
-    abstract public boolean meat();
+    abstract public void meat();
 
 
 }

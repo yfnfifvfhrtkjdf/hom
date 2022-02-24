@@ -8,8 +8,6 @@ public class Zoo {
     public static void main(String[] args) {
 
         //Животные
-        Animal a1=new Carnivorous();
-        Animal a2=new Herbivore();
         Food f1=new Meat();
         Food f2=new Grass();
         Dog dog = new Dog();

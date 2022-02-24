@@ -21,8 +21,5 @@ public class Vorobey extends Herbivore implements Voice, Fly {
         // voice = "Чик чирик";
         System.out.println("Чик чирик");
     }
-    @Override
-    public boolean eat(Food food) {
-        return super.eat(food);
-    }
+
 }

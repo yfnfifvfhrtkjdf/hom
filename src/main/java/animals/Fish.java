@@ -13,9 +13,5 @@ public class Fish extends Carnivorous implements Swim {
         System.out.println("Fish swim");
     }
 
-    @Override
-    public boolean eat(Food food) {
-        return super.eat(food);
-    }
 
 }
