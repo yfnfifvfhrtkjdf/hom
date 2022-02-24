@@ -32,15 +32,19 @@ public class Zoo {
         worker.getVoice(vorobey);
         worker.feed(kotik, f2);
        // worker.getVoice(fish);
+
+
+
+
     }
     //статический метод createPond() без параметров
 //возвращает массив с животными, умеющими плавать
     //В методе main в цикле вызвать метод swim()
     // у каждого животного из массива, созданного через createPond().
-    public static void createPond(){
+    public static Swim[] createPond(){
         Swim[] swims = new Swim[2];
         swims[0] = new Fish();
         swims[1]=new Dog();
-        return;
+        return swims;
     }
 }
