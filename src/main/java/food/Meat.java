@@ -9,7 +9,7 @@ public class Meat extends  Food{
 
     @Override
     public int getEnergy() {
-        return 0;
+        return 10;
     }
 
     @Override

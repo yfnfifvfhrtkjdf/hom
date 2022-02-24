@@ -9,7 +9,7 @@ public class Grass extends Food {
 
     @Override
     public int getEnergy() {
-        return 0;
+        return 5;
     }
 
     @Override
