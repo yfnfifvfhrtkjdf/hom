@@ -16,10 +16,11 @@ public class Kotik extends Carnivorous implements Voice, Run {
         System.out.println("Котик бежит со скоростью " +speed + k);
     }
 
-    public void getVoice() {
+    public String getVoice() {
        String voice = "MEOW";
         System.out.println(voice);
        // System.out.println("MEOW");
+        return Voice.a;
     }
 
 

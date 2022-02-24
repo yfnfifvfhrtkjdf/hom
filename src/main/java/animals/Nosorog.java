@@ -17,10 +17,11 @@ public class Nosorog extends Herbivore implements Voice, Run {
     }
 
 
-    public void getVoice() {
+    public String getVoice() {
          String  voice="*НЕСРАВНИМЫЙ КРИК НОСОРОГА*";
        // System.out.println("*НЕСРАВНИМЫЙ КРИК НОСОРОГА*");
         System.out.println(voice);
+        return voice;
     }
 }
 

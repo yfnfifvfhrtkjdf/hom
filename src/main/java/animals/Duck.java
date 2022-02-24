@@ -14,11 +14,11 @@ public class Duck extends Herbivore implements Voice, Run, Swim, Fly {
     }
 
 
-    public void getVoice() {
+    public String getVoice() {
         String voice="КРЯ";
         System.out.println("КРЯ");
         System.out.println(voice);
-
+return voice;
     }
 
     @Override
