@@ -9,7 +9,8 @@ public abstract class Herbivore extends Animal {
     @Override
     public void eat(Food food) {
         if (food instanceof Grass){
-            satiety= food.getEnergy(5);
+            satiety++;
+            satiety= food.getEnergy();
             System.out.println(" Поел травки " +" Сытоть: "+satiety);
         }else {
             satiety--;
