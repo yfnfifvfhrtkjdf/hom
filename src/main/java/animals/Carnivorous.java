@@ -19,9 +19,9 @@ public abstract class Carnivorous extends Animal {
 
     }
 
-    //  @Override
-    public void getVoice(Voice voice) {
-        voice.getVoice(voice);
+
+    public void getVoice() {
+        getVoice();
         //   System.out.println(voice);
 
     }

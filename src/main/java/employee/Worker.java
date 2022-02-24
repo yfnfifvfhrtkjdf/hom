@@ -12,8 +12,8 @@ public class Worker {
 //У метода должен быть один параметр –животное, которое издает звук.
 // Метод должен принимать в качестве аргумента
 // только тех животных, которые могут издавать звуки.
-    public void getVoice(Voice animal) {
-        animal.getVoice(animal);
+    public void getVoice(Animal animal) {
+        animal.getVoice();
 
     }
 }

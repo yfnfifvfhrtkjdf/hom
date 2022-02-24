@@ -20,9 +20,8 @@ public abstract class Herbivore extends Animal {
     }
 
 
-    @Override
     public void getVoice(Voice voice) {
-        voice.getVoice(voice);
+        voice.getVoice();
         System.out.println("Животное говорит ");
     }
 
