@@ -1,8 +1,8 @@
 package animals;
-
+import food.Food;
 import java.util.*;
 
-public class Kotik {
+public class Kotik extends Carnivorous implements Voice, Run {
     private String name; // имя
     private String voice; // голос
     private int satiety; // сытость
@@ -228,7 +228,7 @@ public class Kotik {
     public String[] liveAnotherDay() {
         System.out.println("Имя: " + getName());
         System.out.println("Вес: " + getWeight());
-        String[] myArray= new String[24];
+        String[] myArray = new String[24];
         for (int num = 0; num < myArray.length; num++) {
             switch ((int) (Math.random() * METHODS) + 1) {
                 case 1:
@@ -257,7 +257,9 @@ public class Kotik {
                     }
                     break;
             }
-            if (satiety <= 0) {eat(7);}
+            if (satiety <= 0) {
+                eat(7);
+            }
         }
         for (String s : myArray) {
             System.out.println(s);
@@ -265,4 +267,25 @@ public class Kotik {
         System.out.println();
         return myArray;
     }
+  //  @Override
+  //  public int getSatiety() {
+  //      return super.getSatiety();
+  //  }
+
+    @Override
+    public void run() {
+        int speed = 25;
+        String k = "Километров в час";
+        System.out.println("Котик бежит со скоростью " +speed + k);
+    }
+
+    public void getVoice(Voice voice) {
+        System.out.println("MEOW");
+    }
+
+    @Override
+    public boolean eat(Food food) {
+        return super.eat(food);
+    }
+
 }
