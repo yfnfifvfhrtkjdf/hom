@@ -20,9 +20,9 @@ public class Dog extends Carnivorous implements Voice, Run {
   //  }
 
     @Override
-    public void getVoice(String voice) {
-        voice ="WOOOOOOW";
-     //   System.out.println("Я головорю WOOOOOOW");
+    public void getVoice() {
+      String  voice ="WOOOOOOW";
+       System.out.println("Я головорю WOOOOOOW");
         System.out.println(voice);
     }
 }
