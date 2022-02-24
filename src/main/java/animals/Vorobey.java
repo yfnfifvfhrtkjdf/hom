@@ -17,9 +17,10 @@ public class Vorobey extends Herbivore implements Voice, Fly {
 
 
 
-    public void getVoice() {
-        // voice = "Чик чирик";
-        System.out.println("Чик чирик");
+    public void getVoice(String voice) {
+         voice = "Чик чирик";
+      //  System.out.println("Чик чирик");
+        System.out.println(voice);
     }
 
 }

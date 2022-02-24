@@ -20,8 +20,8 @@ public abstract class Carnivorous extends Animal {
     }
 
 
-    public void getVoice() {
-        getVoice();
+    public void getVoice(String v) {
+        getVoice(v);
         //   System.out.println(voice);
 
     }

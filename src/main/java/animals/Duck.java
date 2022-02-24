@@ -14,9 +14,10 @@ public class Duck extends Herbivore implements Voice, Run, Swim, Fly {
     }
 
 
-    public void getVoice() {
-        // voice="КРЯ";
-        System.out.println("КРЯ");
+    public void getVoice(String voice) {
+         voice="КРЯ";
+       // System.out.println("КРЯ");
+        System.out.println(voice);
 
     }
 

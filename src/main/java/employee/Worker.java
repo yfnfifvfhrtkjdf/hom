@@ -13,7 +13,7 @@ public class Worker {
 // Метод должен принимать в качестве аргумента
 // только тех животных, которые могут издавать звуки.
     public void getVoice(Voice voice) {
-        voice.getVoice();
+        voice.getVoice(Voice.a);
 
     }
 }
