@@ -29,11 +29,11 @@ public class Dog extends Carnivorous implements Voice, Run {
     public int eat(Food food) {
         try{
             if (food instanceof Meat){
-                throw new WrongFoodException("WrongFoodException");
+                satiety = food.getEnergy();
+                System.out.format("Собачка поела - %d \n", satiety);
             }
             else if (food instanceof Grass){
-                satiety = food.getEnergy();
-                System.out.format("Животное сыто, уровень сытости - %d \n", satiety);
+                throw new WrongFoodException("WrongFoodException");
             }}
         catch (WrongFoodException e) {
             e.printStackTrace();

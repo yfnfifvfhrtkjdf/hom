@@ -35,7 +35,7 @@ public class Vorobey extends Herbivore implements Voice, Fly {
             }
             else if (food instanceof Grass){
                 satiety = food.getEnergy();
-                System.out.format("Животное сыто, сытость - %d \n", satiety);
+                System.out.format("Воробушек сыт - %d \n", satiety);
             }}
         catch (WrongFoodException e) {
             e.printStackTrace();

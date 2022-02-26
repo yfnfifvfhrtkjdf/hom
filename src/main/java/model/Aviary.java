@@ -21,13 +21,13 @@ public class Aviary <R extends Animal> {
     // в класс Aviary (универсальный параметр).
     // Сразу проинициализировать поле пустой коллекцией.
 
-    private HashMap <String, R> avMap = new HashMap<>();
+    private HashMap <String, R> aviaryMap = new HashMap<>();
 
   //  addAnimal - добавить животное в вольер (метод принимает объект
   //  животного с соответствующим вольеру типом);
     public void addAnimal(R animal){
         if (size.equals(animal.getSize())){
-            avMap.put(animal.getName(), animal);}
+            aviaryMap.put(animal.getName(), animal);}
         else {
             throw new WrongSizeException("WrongFoodException");}
         }
@@ -37,16 +37,16 @@ public class Aviary <R extends Animal> {
         // универсальному параметру обобщенного класса;
 
         public R getAnimal (String name){
-        R animal=avMap.get(name);
+        R animal= aviaryMap.get(name);
             System.out.println(animal);
             return animal;
         }
 
         //removeAnimal - удалить животное из вольера по name, вернуть
         // boolean в зависимости от того было ли указанное животное в вольере;
-        public boolean remuveAnimal(String name){
-        if (avMap.containsKey(name)) {
-            avMap.remove(name);
+        public boolean removeAnimal(String name){
+        if (aviaryMap.containsKey(name)) {
+            aviaryMap.remove(name);
             return true;
         }else {
             return false;

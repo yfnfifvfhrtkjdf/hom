@@ -28,11 +28,11 @@ public class Fish extends Carnivorous implements Swim {
     public int eat(Food food) {
         try{
             if (food instanceof Meat){
-                throw new WrongFoodException("WrongFoodException");
+                satiety = food.getEnergy();
+                System.out.format("Рыбка поела - %d \n", satiety);
             }
             else if (food instanceof Grass){
-                satiety = food.getEnergy();
-                System.out.format("Животное сыто, уровень сытости - %d \n", satiety);
+                throw new WrongFoodException("WrongFoodException");
             }}
         catch (WrongFoodException e) {
             e.printStackTrace();

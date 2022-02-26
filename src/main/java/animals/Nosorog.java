@@ -42,7 +42,7 @@ public class Nosorog extends Herbivore implements Voice, Run {
             }
             else if (food instanceof Grass){
                 satiety = food.getEnergy();
-                System.out.format("Животное сыто, сытость - %d \n", satiety);
+                System.out.format("Носорог сыт - %d \n", satiety);
             }}
         catch (WrongFoodException e) {
             e.printStackTrace();

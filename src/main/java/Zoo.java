@@ -55,6 +55,7 @@ public class Zoo {
         Meat meat = new Meat();
 
         kotik.eat(meat);
+        kotik.eat(grass);
 
     }
 }
