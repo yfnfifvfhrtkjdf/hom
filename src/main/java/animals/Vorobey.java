@@ -40,7 +40,7 @@ public class Vorobey extends Herbivore implements Voice, Fly {
            //     System.out.println("Воробушек сыт" + satiety);
             }}
         catch (WrongFoodException e) {
-            e.printStackTrace();
+            System.out.println(e.toString());;
         }
         return satiety;
     }

@@ -60,7 +60,7 @@ public class Zoo {
 
        // fish.eat(meat);
         fish.eat(grass);
-
+        dog.eat(meat);
 
 
 

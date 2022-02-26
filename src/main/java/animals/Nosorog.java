@@ -47,7 +47,7 @@ public class Nosorog extends Herbivore implements Voice, Run {
          //       System.out.println("Носорог сыт" + satiety);
             }}
         catch (WrongFoodException e) {
-            e.printStackTrace();
+            System.out.println(e.toString());;
         }
         return satiety;
     }

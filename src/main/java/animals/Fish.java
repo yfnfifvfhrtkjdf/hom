@@ -37,7 +37,7 @@ public class Fish extends Carnivorous implements Swim {
                 throw new WrongFoodException("WrongFoodException");
             }}
         catch (WrongFoodException e) {
-            e.printStackTrace();
+            System.out.println(e.toString());;
         }
         return satiety;
     }

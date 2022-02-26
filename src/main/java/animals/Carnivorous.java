@@ -9,19 +9,6 @@ public abstract class Carnivorous extends Animal {
 
     public Carnivorous(String name) {super(name);}
 
-    @Override
-    public int eat(Food food) throws WrongFoodException {
-        try{
-        if (food instanceof Meat) {
-            System.out.println("еда подходит");
-        } else {
-            throw  new WrongFoodException ("wrongFoodException");
-        }}
-        catch (WrongFoodException e) {
-            throw  new WrongFoodException ("wrongFoodException");
-        }
-return 0;
-    }
 
 
     public String getVoice() {
@@ -32,6 +19,15 @@ return 0;
         return a;
     }
 
+    @Override
+    public int eat(Food food) throws WrongFoodException {
+        if(food instanceof Meat){
+            return 0;
+        }
+        else{
+            throw new WrongFoodException("WrongFoodException");
+        }
+    }
     @Override
     public void swim() {
         System.out.println("Я плывуууу");
