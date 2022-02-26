@@ -40,7 +40,7 @@ public abstract class Carnivorous extends Animal {
     @Override
     public int eat(Food food) throws WrongFoodException {
         if(food instanceof Meat){
-            return 0;
+            return food.getEnergy();
         }
         else{
             throw new WrongFoodException("WrongFoodException");

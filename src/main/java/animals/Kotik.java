@@ -41,7 +41,8 @@ public class Kotik extends Carnivorous implements Voice, Run {
                 throw new WrongFoodException("WrongFoodException");}
         }
         catch (WrongFoodException e) {
-            e.printStackTrace();
+            //e.printStackTrace();
+            System.out.println(e.toString());
         }
         return satiety;
     }

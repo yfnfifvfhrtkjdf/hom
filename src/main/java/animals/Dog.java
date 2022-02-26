@@ -38,8 +38,9 @@ public class Dog extends Carnivorous implements Voice, Run {
                 throw new WrongFoodException("WrongFoodException");
             }}
         catch (WrongFoodException e) {
-            e.printStackTrace();
-       //     System.out.println(e.toString());;
+         //   System.out.println(e);
+         //   e.printStackTrace();
+            System.out.println(e.toString());;
 
        }return satiety;
     }

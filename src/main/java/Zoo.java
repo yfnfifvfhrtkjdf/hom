@@ -59,10 +59,8 @@ public class Zoo {
         Grass grass = new Grass();
         Meat meat = new Meat();
 
-        fish.eat(meat);
+
 fish.eat(grass);
-        dog.eat(grass);
-        dog.eat(meat);
-duck.eat(meat);
+
     }
 }
