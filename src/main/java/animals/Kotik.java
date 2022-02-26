@@ -28,7 +28,7 @@ public class Kotik extends Carnivorous implements Voice, Run {
         String k = "Километров в час";
         System.out.println("Котик бежит со скоростью " +speed + k);
     }
-   /* @Override
+    @Override
     public int eat(Food food) {
         try {
             if (food instanceof Meat){
@@ -45,8 +45,5 @@ public class Kotik extends Carnivorous implements Voice, Run {
         }
         return satiety;
     }
-
-*/
-
 
 }

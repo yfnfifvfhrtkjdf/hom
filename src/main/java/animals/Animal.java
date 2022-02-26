@@ -4,6 +4,7 @@ import food.WrongFoodException;
 import model.Size;
 
 public abstract class Animal implements Voice, Swim {
+    int satiety;
 
     private String name;
 
@@ -13,13 +14,12 @@ public abstract class Animal implements Voice, Swim {
 
     public abstract Size getSize();
 
-    int satiety;
-
-    abstract public int eat(Food food)throws WrongFoodException;
-
     public int getSatiety() {
-      //  satiety++;
-      //  return satiety;
+        //  satiety++;
+        //  return satiety;
         return 0;
     }
+    abstract public int eat(Food food)throws WrongFoodException;
+
+
 }

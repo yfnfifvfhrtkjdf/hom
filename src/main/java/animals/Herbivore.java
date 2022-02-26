@@ -8,7 +8,7 @@ public abstract class Herbivore extends Animal {
 
     public Herbivore(String name) {super(name);}
 
-    @Override
+ /*   @Override
     public int eat(Food food) throws WrongFoodException {
         try {
         if(food instanceof Grass){
@@ -24,6 +24,16 @@ public abstract class Herbivore extends Animal {
 
     }return 0;
     }
+*/
+ @Override
+ public int eat(Food food) throws WrongFoodException {
+     if(food instanceof Grass){
+         return 0;
+     }
+     else{
+         throw new WrongFoodException("WrongFoodException");
+     }
+ }
 
    // @Override
    // public int eat(Food food) throws WrongFoodException {

@@ -27,7 +27,7 @@ public class Vorobey extends Herbivore implements Voice, Fly {
 
     public String getVoice() {return "Чик чирик";}
 
-   /* @Override
+    @Override
     public int eat(Food food) {
         try{
             if (food instanceof Meat){
@@ -40,15 +40,14 @@ public class Vorobey extends Herbivore implements Voice, Fly {
            //     System.out.println("Воробушек сыт" + satiety);
             }}
         catch (WrongFoodException e) {
-
            // System.out.println(e.toString());;
-          //  e.printStackTrace();
+            e.printStackTrace();
         }
         return satiety;
     }
-*/
+
     @Override
     public void swim() {
-
+        System.out.println("SWIIIIM");
     }
 }

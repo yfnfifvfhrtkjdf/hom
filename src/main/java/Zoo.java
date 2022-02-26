@@ -16,7 +16,7 @@ public class Zoo {
         Dog dog = new Dog("Cobaka");
         Fish fish = new Fish("Riba");
         Kotik kotik = new Kotik("Kot");
-       // Duck duck=new Duck("Utka");
+        Duck duck=new Duck("Utka");
         carnivorousAviary.addAnimal(dog);
     }
     public static void fillHerbivoreAviary() {
@@ -42,7 +42,7 @@ public class Zoo {
     //      return swims;
    // }
 
-    public static void main(String[] args) throws WrongFoodException {
+    public static void main(String[] args)  {
         // fillCarnivorousAviary();
       //  fillHerbivoreAviary();
       //  getCarnivorous("Riba");
@@ -59,13 +59,10 @@ public class Zoo {
         Grass grass = new Grass();
         Meat meat = new Meat();
 
-       // fish.eat(meat);
-
+        fish.eat(meat);
+fish.eat(grass);
         dog.eat(grass);
         dog.eat(meat);
 duck.eat(meat);
-
-
-
     }
 }
