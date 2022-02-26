@@ -9,12 +9,17 @@ public abstract class Herbivore extends Animal {
     public Herbivore(String name) {super(name);}
 
     public int eat(Food food) throws WrongFoodException {
-        if(food instanceof Grass){
-            return 0;
-        }
-        else{
-            throw new WrongFoodException("WrongFoodException");
-        }
+        try {
+            if (food instanceof Grass) {
+                System.out.println("еда подходит");
+                return 0;
+            } else {
+                throw new WrongFoodException("WrongFoodException");
+            }
+        } catch (WrongFoodException e) {
+            e.printStackTrace();
+        }return 0;
+    }
 
    // @Override
    // public int eat(Food food) throws WrongFoodException {
@@ -43,4 +48,4 @@ public abstract class Herbivore extends Animal {
   //  public void swim() {
   //      System.out.println("Животное плывет");
   //  }
-}
+
