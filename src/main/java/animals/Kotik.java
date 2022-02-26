@@ -29,7 +29,7 @@ public class Kotik extends Carnivorous implements Voice, Run {
         System.out.println("Котик бежит со скоростью " +speed + k);
     }
     @Override
-    public int eat(Food food) {
+    public int eat(Food food) throws WrongFoodException {
         try {
             if (food instanceof Meat){
                 satiety = food.getEnergy();
@@ -42,7 +42,8 @@ public class Kotik extends Carnivorous implements Voice, Run {
         }
         catch (WrongFoodException e) {
             //e.printStackTrace();
-            System.out.println(e.toString());
+           // System.out.println(e.toString());
+            throw e;
         }
         return satiety;
     }

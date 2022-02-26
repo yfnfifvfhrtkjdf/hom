@@ -25,7 +25,7 @@ public class Fish extends Carnivorous implements Swim {
 
     public Size getSize() {return MEDIUM;}
     @Override
-    public int eat(Food food) {
+    public int eat(Food food) throws WrongFoodException {
         try{
             if (food instanceof Meat){
                 satiety = food.getEnergy();
@@ -37,9 +37,10 @@ public class Fish extends Carnivorous implements Swim {
                 throw new WrongFoodException("WrongFoodException");
             }}
         catch (WrongFoodException e) {
-            e.printStackTrace();
-            System.out.println(e.toString());;
-            e.getMessage();
+          //  e.printStackTrace();
+          //  System.out.println(e.toString());;
+          //  e.getMessage();
+            throw  e;
         }
         return satiety;
     }

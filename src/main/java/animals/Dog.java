@@ -35,7 +35,7 @@ public class Dog extends Carnivorous implements Voice, Run {
     }
 
     @Override
-    public int eat(Food food) {
+    public int eat(Food food)throws WrongFoodException {
         try {
             if (food instanceof Meat) {
                 satiety = food.getEnergy();
@@ -46,10 +46,11 @@ public class Dog extends Carnivorous implements Voice, Run {
                 throw new WrongFoodException("WrongFoodException");
             }
         } catch (WrongFoodException e) {
-               System.out.println(e);
-            e.printStackTrace();
-               System.out.println(e.toString());;
-            e.getMessage();
+           //    System.out.println(e);
+        //    e.printStackTrace();
+         //      System.out.println(e.toString());;
+          //  e.getMessage();
+            throw e;
 
         }
         return satiety;

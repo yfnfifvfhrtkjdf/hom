@@ -42,7 +42,7 @@ public class Zoo {
     //      return swims;
    // }
 
-    public static void main(String[] args)  {
+    public static void main(String[] args) throws WrongFoodException {
         // fillCarnivorousAviary();
       //  fillHerbivoreAviary();
       //  getCarnivorous("Riba");
@@ -60,7 +60,12 @@ public class Zoo {
         Meat meat = new Meat();
 
 
-fish.eat(grass);
-dog.eat(grass);
+        try {
+            fish.eat(grass);
+        } catch (WrongFoodException e) {
+            e.printStackTrace();
+        }
+        dog.eat(grass);
+        dog.eat(meat);
     }
 }

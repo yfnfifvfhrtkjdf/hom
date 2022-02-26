@@ -29,7 +29,7 @@ public class Duck extends Herbivore implements Voice, Run, Swim, Fly {
     public void fly() {System.out.println("Duck fly");}
 
     @Override
-    public int eat(Food food) {
+    public int eat(Food food) throws WrongFoodException{
         try{
             if (food instanceof Meat){
              //   System.out.println("Травоядные не едят мясо");
@@ -41,10 +41,11 @@ public class Duck extends Herbivore implements Voice, Run, Swim, Fly {
            //     System.out.println("Уточка поела" + satiety);
             }}
         catch (WrongFoodException e) {
-           System.out.println(e.toString());;
-            System.out.println(e);
-            e.printStackTrace();
-            e.getMessage();
+         //  System.out.println(e.toString());;
+          //  System.out.println(e);
+          //  e.printStackTrace();
+          //  e.getMessage();
+            throw e;
         }
         return satiety;
     }

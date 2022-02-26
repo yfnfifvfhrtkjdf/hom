@@ -37,7 +37,7 @@ public class Nosorog extends Herbivore implements Voice, Run {
     @Override
     public int eat(Food food) {
         try{
-            if (food instanceof Meat){
+            if (food instanceof Meat) {
            //     System.out.println("Травоядные не едят мясо");
                 throw new WrongFoodException("WrongFoodException");
             }
