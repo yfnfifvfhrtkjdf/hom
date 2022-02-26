@@ -10,7 +10,10 @@ import static model.Size.SMALL;
 
 public class Dog extends Carnivorous implements Voice, Run {
     private int satiety;
-    public Dog(String name) {super(name);}
+
+    public Dog(String name) {
+        super(name);
+    }
 
     @Override
     public int getSatiety() {
@@ -18,32 +21,39 @@ public class Dog extends Carnivorous implements Voice, Run {
     }
 
     @Override
-    public void run() {System.out.println("RUUUUUUUN");}
+    public void run() {
+        System.out.println("RUUUUUUUN");
+    }
 
-    public Size getSize() {return SMALL;}
+    public Size getSize() {
+        return SMALL;
+    }
 
     @Override
-    public String getVoice() {return "WOOOOOOW";}
+    public String getVoice() {
+        return "WOOOOOOW";
+    }
 
     @Override
     public int eat(Food food) {
-        try{
-           if (food instanceof Meat){
+        try {
+            if (food instanceof Meat) {
                 satiety = food.getEnergy();
                 System.out.format("Собачка поела - %d \n", satiety);
-         //       System.out.println("Собачка поела" + satiety);
-            }
-            else if (food instanceof Grass){
-         //       System.out.println("Хищники травку не едят");
+                //       System.out.println("Собачка поела" + satiety);
+            } else if (food instanceof Grass) {
+                //       System.out.println("Хищники травку не едят");
                 throw new WrongFoodException("WrongFoodException");
-            }}
-        catch (WrongFoodException e) {
-         //   System.out.println(e);
-         //   e.printStackTrace();
-            System.out.println(e.toString());;
+            }
+        } catch (WrongFoodException e) {
+               System.out.println(e);
+            e.printStackTrace();
+               System.out.println(e.toString());;
+            e.getMessage();
 
-       }return satiety;
+        }
+        return satiety;
     }
-
-
 }
+
+

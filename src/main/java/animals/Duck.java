@@ -42,8 +42,9 @@ public class Duck extends Herbivore implements Voice, Run, Swim, Fly {
             }}
         catch (WrongFoodException e) {
            System.out.println(e.toString());;
-          //  System.out.println(e);
-           // e.printStackTrace();
+            System.out.println(e);
+            e.printStackTrace();
+            e.getMessage();
         }
         return satiety;
     }
