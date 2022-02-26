@@ -3,6 +3,7 @@ import employee.Worker;
 import food.Food;
 import food.Grass;
 import food.Meat;
+import food.WrongFoodException;
 import model.Aviary;
 import model.Size;
 
@@ -41,7 +42,7 @@ public class Zoo {
     //      return swims;
    // }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws WrongFoodException {
         // fillCarnivorousAviary();
       //  fillHerbivoreAviary();
       //  getCarnivorous("Riba");
@@ -59,9 +60,10 @@ public class Zoo {
         Meat meat = new Meat();
 
        // fish.eat(meat);
-        fish.eat(grass);
-        dog.eat(meat);
 
+        dog.eat(grass);
+        dog.eat(meat);
+duck.eat(meat);
 
 
 

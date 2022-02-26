@@ -34,7 +34,7 @@ public class Nosorog extends Herbivore implements Voice, Run {
     @Override
     public void swim() {    }
 
-    @Override
+  /*  @Override
     public int eat(Food food) {
         try{
             if (food instanceof Meat){
@@ -51,7 +51,7 @@ public class Nosorog extends Herbivore implements Voice, Run {
         }
         return satiety;
     }
-
+*/
 
 }
 

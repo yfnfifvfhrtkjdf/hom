@@ -24,7 +24,7 @@ public class Fish extends Carnivorous implements Swim {
     }
 
     public Size getSize() {return MEDIUM;}
-    @Override
+ /*   @Override
     public int eat(Food food) {
         try{
             if (food instanceof Meat){
@@ -41,5 +41,5 @@ public class Fish extends Carnivorous implements Swim {
         }
         return satiety;
     }
-
+*/
 }
