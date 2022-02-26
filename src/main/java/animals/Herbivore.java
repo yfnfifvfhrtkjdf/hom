@@ -14,10 +14,10 @@ public abstract class Herbivore extends Animal {
                 System.out.println("еда подходит");
                 return 0;
             } else {
-                throw new WrongFoodException("WrongFoodException");
+                throw new WrongFoodException("wrongFoodException");
             }
         } catch (WrongFoodException e) {
-            throw new WrongFoodException("WrongFoodException");
+            throw new WrongFoodException("wrongFoodException");
         }
     }
 

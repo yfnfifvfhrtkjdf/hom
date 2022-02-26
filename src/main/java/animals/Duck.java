@@ -32,7 +32,7 @@ public class Duck extends Herbivore implements Voice, Run, Swim, Fly {
     public int eat(Food food) {
         try{
             if (food instanceof Meat){
-                System.out.println("Травоядные не едят мясо");
+             //   System.out.println("Травоядные не едят мясо");
                 throw new WrongFoodException("WrongFoodException");
             }
             else if (food instanceof Grass){

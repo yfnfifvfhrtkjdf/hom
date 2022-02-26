@@ -15,12 +15,12 @@ public abstract class Carnivorous extends Animal {
         if (food instanceof Meat) {
             System.out.println("еда подходит");
         } else {
-            throw  new WrongFoodException ("WrongFoodException");
+            throw  new WrongFoodException ("wrongFoodException");
         }}
         catch (WrongFoodException e) {
-            throw  new WrongFoodException ("WrongFoodException");
+            throw  new WrongFoodException ("wrongFoodException");
         }
-return eat(food);
+return 0;
     }
 
 

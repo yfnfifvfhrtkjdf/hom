@@ -42,9 +42,9 @@ public class Zoo {
    // }
 
     public static void main(String[] args) {
-        fillCarnivorousAviary();
+        // fillCarnivorousAviary();
       //  fillHerbivoreAviary();
-        getCarnivorous("Riba");
+      //  getCarnivorous("Riba");
       //  getHerbivore("Utka");
 
         Kotik kotik = new Kotik("Kot");
