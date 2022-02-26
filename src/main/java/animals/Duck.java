@@ -1,34 +1,59 @@
 package animals;
 
 import food.Food;
+import food.Grass;
+import food.Meat;
+import food.WrongFoodException;
+import model.Size;
+
+import static model.Size.SMALL;
 
 public class Duck extends Herbivore implements Voice, Run, Swim, Fly {
-    @Override
-    public int getSatiety() {
-        return super.getSatiety();
-    }
+
+    private int satiety;
+
+    public Duck(String name) {super(name);}
+
+    public Size getSize() {return SMALL;}
 
     @Override
     public void run() {
         System.out.println("Duck run");
     }
-
-
-    public String getVoice() {
-        String voice="КРЯ";
-        System.out.println("КРЯ");
-        System.out.println(voice);
-return voice;
-    }
+    public String getVoice() {return "КРЯ";}
 
     @Override
-    public void swim() {
-        System.out.println("Duck swim");
-    }
+    public void swim() {System.out.println("Duck swim");}
 
     @Override
-    public void fly() {
-        System.out.println("Duck fly");
+    public void fly() {System.out.println("Duck fly");}
+
+    @Override
+    public int eat(Food food) {
+        try{
+            if (food instanceof Meat){
+                throw new WrongFoodException("WrongFoodException");
+            }
+            else if (food instanceof Grass){
+                satiety = food.getEnergy();
+                System.out.format("Животное сыто, сытость - %d \n", satiety);
+            }}
+        catch (WrongFoodException e) {
+            e.printStackTrace();
+        }
+        return satiety;
     }
+
+   // @Override
+   // public int getSatiety() {
+   //     return super.getSatiety();
+   // }
+
+
+
+
+
+
+
 
 }
