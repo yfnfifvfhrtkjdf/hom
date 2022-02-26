@@ -18,9 +18,9 @@ public abstract class Carnivorous extends Animal {
             throw  new WrongFoodException ("WrongFoodException");
         }}
         catch (WrongFoodException e) {
-            e.printStackTrace();
+            throw  new WrongFoodException ("WrongFoodException");
         }
-return 0;
+return eat(food);
     }
 
 

@@ -17,8 +17,8 @@ public abstract class Herbivore extends Animal {
                 throw new WrongFoodException("WrongFoodException");
             }
         } catch (WrongFoodException e) {
-            e.printStackTrace();
-        }return 0;
+            throw new WrongFoodException("WrongFoodException");
+        }
     }
 
    // @Override
