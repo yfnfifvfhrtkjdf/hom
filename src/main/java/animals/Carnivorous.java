@@ -39,13 +39,22 @@ public abstract class Carnivorous extends Animal {
     }
     @Override
     public int eat(Food food) throws WrongFoodException {
-        if(food instanceof Meat){
-            return food.getEnergy();
-        }
-        else{
+        Meat meat = new Meat();
+        try {
+           food.equals(meat);
             throw new WrongFoodException("WrongFoodException");
+        }catch (WrongFoodException e){
+            System.out.println(e.toString());
+            e.printStackTrace();
+        }
+
+       // if(food instanceof Meat){
+            return food.getEnergy();
+    //    }
+      //  else{
+      //      throw new WrongFoodException("WrongFoodException");
         }
     }
 
 
-}
+//}
