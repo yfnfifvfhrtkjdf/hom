@@ -31,8 +31,10 @@ public class Dog extends Carnivorous implements Voice, Run {
             if (food instanceof Meat){
                 satiety = food.getEnergy();
                 System.out.format("Собачка поела - %d \n", satiety);
+           //     System.out.println("Собачка поела" + satiety);
             }
             else if (food instanceof Grass){
+                System.out.println("Хищники травку не едят");
                 throw new WrongFoodException("WrongFoodException");
             }}
         catch (WrongFoodException e) {

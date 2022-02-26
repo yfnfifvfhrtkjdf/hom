@@ -34,8 +34,10 @@ public class Kotik extends Carnivorous implements Voice, Run {
             if (food instanceof Meat){
                 satiety = food.getEnergy();
                 System.out.format("Котик сыт - %d \n", satiety);
+              //  System.out.println("Котик сыт"+ satiety);
             }
             else if (food instanceof Grass){
+                System.out.println("Хищники травку не едят");
                 throw new WrongFoodException("WrongFoodException");}
         }
         catch (WrongFoodException e) {

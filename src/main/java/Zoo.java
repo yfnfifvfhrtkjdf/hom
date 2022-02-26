@@ -42,20 +42,47 @@ public class Zoo {
    // }
 
     public static void main(String[] args) {
-        fillCarnivorousAviary();
+       // fillCarnivorousAviary();
       //  fillHerbivoreAviary();
-        getCarnivorous("Riba");
+      //  getCarnivorous("Riba");
       //  getHerbivore("Utka");
 
         Kotik kotik = new Kotik("Kot");
-        //Fish fish = new Fish("Riba");
-       // Dog dog = new Dog("Cobaka");
+        Fish fish = new Fish("Riba");
+        Dog dog = new Dog("Cobaka");
+        Duck duck=new Duck("Utka");
+        Nosorog nosorog = new Nosorog("Nosorogik");
+        Vorobey vorobey = new Vorobey("Ptitsa");
+
 
         Grass grass = new Grass();
         Meat meat = new Meat();
-
+        System.out.println("fish");
+        fish.eat(meat);
+        fish.eat(grass);
+        System.out.println();
+        System.out.println("dog");
+        dog.eat(meat);
+        dog.eat(grass);
+        System.out.println();
+        System.out.println("duck");
+        duck.eat(meat);
+        duck.eat(grass);
+        System.out.println();
+        System.out.println("nosorog");
+        nosorog.eat(meat);
+        nosorog.eat(grass);
+        System.out.println();
+        System.out.println("vorobey");
+        vorobey.eat(meat);
+        vorobey.eat(grass);
+        System.out.println();
+        System.out.println("kotik");
         kotik.eat(meat);
         kotik.eat(grass);
+
+
+
 
     }
 }

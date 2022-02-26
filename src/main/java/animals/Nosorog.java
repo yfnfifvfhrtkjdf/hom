@@ -38,11 +38,13 @@ public class Nosorog extends Herbivore implements Voice, Run {
     public int eat(Food food) {
         try{
             if (food instanceof Meat){
+                System.out.println("Травоядные не едят мясо");
                 throw new WrongFoodException("WrongFoodException");
             }
             else if (food instanceof Grass){
                 satiety = food.getEnergy();
                 System.out.format("Носорог сыт - %d \n", satiety);
+         //       System.out.println("Носорог сыт" + satiety);
             }}
         catch (WrongFoodException e) {
             e.printStackTrace();
