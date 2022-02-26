@@ -75,7 +75,7 @@ public abstract class Carnivorous extends Animal {
                System.out.println(e);
             e.printStackTrace();
               System.out.println(e.toString());;
-            e.getMessage();
+            throw e;
 
         }return 0;
     }
