@@ -16,6 +16,6 @@ public class PositiveCalculatorTest {
 
     @Test(dataProvider = "positiveTestData")
     public void   positiveTest(String result, String a, String b, String c){
-        Assert.assertEquals(result, Calculator.execute(new  String[]{a,b,c}), "Значения не равны");
+        Assert.assertEquals(result, Calculator.execute(new  String[]{a,c,b}), "Значения не равны");
     }
 }

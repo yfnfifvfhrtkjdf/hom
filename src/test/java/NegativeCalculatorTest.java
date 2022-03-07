@@ -21,7 +21,7 @@ public class NegativeCalculatorTest {
     throw  new CalculatorException("CalculatorException");
         }
         else{
-            Assert.assertNotEquals(result, Calculator.execute(new String[]{a,b,c}), "Значения равны");
+            Assert.assertNotEquals(result, Calculator.execute(new String[]{a,c,b}), "Значения равны");
         }
     }
 
