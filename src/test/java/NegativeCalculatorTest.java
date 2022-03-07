@@ -8,18 +8,18 @@ public class NegativeCalculatorTest {
     @DataProvider
     public Object[][] negativeData (){
             return new  Object[][]{
-                 //   {"+", "18", "101"},
-                 //   {"-", "9", "7"},
-                 //   {"*", "50", "2"},
-                   {"18","-101","+"},
-                   {"9","7","-"},
-                    {"50","2","*"},
+                   {"+", "18", "101"},
+                   {"-", "9", "7"},
+                    {"*", "50", "2"},
+                  // {"18","-101","+"},
+                //   {"9","7","-"},
+                 //   {"50","2","*"},
             };
     }
 
     @Test(dataProvider = "negativeData")
-    public void negativeTest(String a, String b, String c) throws CalculatorException {
-        if(a.equals("") && b.equals("") & a.equals("0")|| c.equals("/")){
+    public void negativeTest(String c, String a, String b) throws CalculatorException {
+        if(a.equals("") && b.equals("") & a.equals("")|| c.equals("/")){
     throw  new CalculatorException("CalculatorException");
         }
         else{
