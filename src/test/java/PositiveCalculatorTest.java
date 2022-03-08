@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 public class PositiveCalculatorTest extends Calculator {
 
     @DataProvider
-    public Object[][] positiveData() throws CalculatorException {
+    public Object[][] positiveData() {
         return new Object[][]{
                 {"+", "0", "1", "1"},
                 {"-", "5", "5", "0"},
@@ -21,7 +21,7 @@ public class PositiveCalculatorTest extends Calculator {
     @Test(dataProvider = "positiveData")
     public void positiveTest(String c, String a, String b, String result){
         if (true) {
-            Assert.assertNotEquals(result, Calculator.execute(new String[]{a, c, b}), "Значение");
+            Assert.assertEquals(result, Calculator.execute(new String[]{a, c, b}), "Значение");
         } else {
             throw new CalculatorException("CalculatorException");
 

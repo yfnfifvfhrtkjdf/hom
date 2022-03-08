@@ -5,9 +5,16 @@ import model.CalculatorException;
 import java.util.Scanner;
 
 public class Main {
+    Scanner in = new Scanner(System.in);
 
-    public static void main(String[] args) throws CalculatorException {
-        Scanner in = new Scanner(System.in);
+    public static void main(String[] args) {
+    }
+
+}
+
+
+
+/*
         String operation=in.nextLine();
         System.out.println(operation);
 
@@ -19,5 +26,5 @@ public class Main {
         Calculator.execute(new String[]{line,operation, line1});
         System.out.println("Результат операции: "+ Calculator.execute(new String[]{line,operation, line1}));
     }
+*/
 
-}
