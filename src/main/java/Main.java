@@ -1,11 +1,12 @@
 import model.Calculator;
+import model.CalculatorException;
 
 
 import java.util.Scanner;
 
-public class Main{
+public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws CalculatorException {
         Scanner in = new Scanner(System.in);
         String operation=in.nextLine();
         System.out.println(operation);

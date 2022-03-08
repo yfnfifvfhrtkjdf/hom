@@ -1,7 +1,8 @@
 package model;
 
 public class CalculatorException extends  RuntimeException{
-    public CalculatorException(String CalculatorException){
+    public CalculatorException(String CalculatorException) {
+        toString();
     }
 
 }
