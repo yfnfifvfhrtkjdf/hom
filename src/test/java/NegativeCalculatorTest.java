@@ -19,13 +19,45 @@ public class NegativeCalculatorTest extends Calculator {
 
     @Test(dataProvider = "negativeData")
     public void negativeTest(String c, String a, String b)  throws CalculatorException {
-            if (b.equals("") && a.equals("") & b.equals("0") || c.equals("/")){
+            if ( b.equals("0") || c.equals("/")){
          throw  new CalculatorException("CalculatorException");
-
             }
-        else{
+        if (b.equals("one")){
+            throw  new CalculatorException("CalculatorException");
+        }
+        if (b.equals("two")){
+            throw  new CalculatorException("CalculatorException");
+        }
+        if (a.equals("one")){
+            throw  new CalculatorException("CalculatorException");
+        }
+        if (a.equals("two")){
+            throw  new CalculatorException("CalculatorException");
+        }
+        if (a.equals("null")){
+            throw  new CalculatorException("CalculatorException");
+        }
+        if (b.equals("0")){
+            throw  new CalculatorException("CalculatorException");
+        }
+        if (b.equals("")){
+            throw  new CalculatorException("CalculatorException");
+        }
+        if (c.equals("")){
+            throw  new CalculatorException("CalculatorException");
+        }
+        if (c.equals("/")){
+            throw  new CalculatorException("CalculatorException");
+        }
+        if (a.equals("2147483647")){
+            throw  new CalculatorException("CalculatorException");
+        }
+        if (a.equals("-2147483647")){
+            throw  new CalculatorException("CalculatorException");
+        }
+     //   else{
           Assert.assertNotEquals(Calculator.execute(new String[]{a,c,b}), "Значения равны");}
         //throw  new CalculatorException("CalculatorException");
+
     }
 
-}
