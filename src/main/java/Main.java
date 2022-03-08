@@ -5,26 +5,28 @@ import model.CalculatorException;
 import java.util.Scanner;
 
 public class Main {
-    Scanner in = new Scanner(System.in);
+    static Scanner in = new Scanner(System.in);
 
     public static void main(String[] args) {
-    }
 
-}
-
-
-
-/*
-        String operation=in.nextLine();
+        String operation = in.nextLine();
         System.out.println(operation);
 
-        String line=in.nextLine();
+        String line = in.nextLine();
         System.out.println(line);
 
-        String line1=in.nextLine();
+        String line1 = in.nextLine();
         System.out.println(line1);
-        Calculator.execute(new String[]{line,operation, line1});
-        System.out.println("Результат операции: "+ Calculator.execute(new String[]{line,operation, line1}));
+        try {
+            Calculator.execute(new String[]{line, operation, line1});
+        } catch (CalculatorException e) {
+            e.printStackTrace();
+        }
+        try {
+            System.out.println("Результат операции: " + Calculator.execute(new String[]{line, operation, line1}));
+        } catch (CalculatorException e) {
+            e.printStackTrace();
+        }
     }
-*/
+}
 

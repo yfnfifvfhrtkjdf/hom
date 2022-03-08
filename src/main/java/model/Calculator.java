@@ -2,31 +2,68 @@ package model;
 
 
 import org.testng.annotations.Ignore;
+import org.testng.reporters.jq.Main;
 
 import java.util.Scanner;
 
 import static java.lang.Integer.parseInt;
 
 public class Calculator {
-    static Scanner scanner = new Scanner(System.in);
-    public static String execute(String[]params)  {
-
+  //  static Scanner scanner = new Scanner(System.in);
+    public static String execute(String[]params) throws CalculatorException {
         int a = parseInt(params[0]);
         int b = parseInt(params[2]);
-        String operation = params[1];
-        switch (params[1]){
-            case "+": operation = String.valueOf(a+b); break;
-            case "-": operation = String.valueOf(a-b); break;
-            case "*": operation = String.valueOf(a*b); break;
-            default:
-                System.out.println("Операция не распознана. Повторите ввод.");
-                throw new CalculatorException ("CalculatorException");
+        int operation = 0;
+            try {
+                switch (params[1]) {
+                    case "+":
+                        operation = a + b;
+                      //  break;
+                       // throw new CalculatorException("CalculatorException");
+                }
+            }catch (Exception e){
+                e = new CalculatorException("CalculatorException");
+
+            }
+            try {
+                switch (params[1]) {
+                    case "-":
+                        operation = a - b;
+                       // break;
+                       // throw new CalculatorException("CalculatorException");
+                }
+            }catch (Exception e){
+              //  throw new CalculatorException("CalculatorException");
+                e = new CalculatorException("CalculatorException");
+            }
+            try {
+                switch (params[1]) {
+                    case "*":
+                        operation = a * b;
+                    //    break;
+                       // throw new CalculatorException("CalculatorException");
+                }
+            }catch (Exception e){
+               // throw new CalculatorException("CalculatorException");
+                e = new CalculatorException("CalculatorException");
+            }
+            try {
+                switch (params[1]) {
+                    case "/":
+                        operation = a / b;
+                      //  throw new CalculatorException("CalculatorException");
+                       // break;
+                }
+            }catch (Exception e){
+                e = new CalculatorException("CalculatorException");
+               // throw new CalculatorException("CalculatorException");
+            }
+
+        return String.valueOf(operation);
         }
-        //return params;
-         return String.valueOf(operation);
-        //  return AssertionError.toString();
+
     }
-}
+
    /* static Scanner scanner = new Scanner(System.in);
     public static String execute (String[] params) {
         int a = parseInt(params[0]);
