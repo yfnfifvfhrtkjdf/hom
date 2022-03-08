@@ -31,9 +31,9 @@ public class NegativeCalculatorTest  {
        if (b.equals("0") ){
     throw  new CalculatorException("CalculatorException");
         }
-      //  else{
-          //  Assert.assertNotEquals(Calculator.execute(new String[]{a,c,b}), "Значения равны");
-      //  }
+        else{
+            Assert.assertNotEquals(Calculator.execute(new String[]{a,c,b}), "Значения равны");
+        }
     }
 
 }
