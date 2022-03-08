@@ -3,7 +3,7 @@ import static java.lang.Integer.parseInt;
 
 public class Calculator {
   //  static Scanner scanner = new Scanner(System.in);
-    public static String execute(String[]params) throws Exception {
+    public static String execute(String[]params)  {
         int a = parseInt(params[0]);
         int b = parseInt(params[2]);
         int operation = 0;
@@ -15,7 +15,7 @@ public class Calculator {
                        // throw new CalculatorException("CalculatorException");
                 }
             }catch (Exception e){
-                throw new CalculatorException("CalculatorException");
+               // throw new CalculatorException("CalculatorException");
 
             }
             try {
@@ -26,7 +26,7 @@ public class Calculator {
                        // throw new CalculatorException("CalculatorException");
                 }
             }catch (Exception e){
-                throw new CalculatorException("CalculatorException");
+              //  throw new CalculatorException("CalculatorException");
             }
             try {
                 switch (params[1]) {
@@ -35,7 +35,7 @@ public class Calculator {
 
                 }
             }catch (Exception e){
-                throw new CalculatorException("CalculatorException");
+               // throw new CalculatorException("CalculatorException");
 
             }
             try {
@@ -45,7 +45,7 @@ public class Calculator {
 
                 }
             }catch (Exception e){
-                throw new CalculatorException("CalculatorException");
+              //  throw new CalculatorException("CalculatorException");
             }
 
         return String.valueOf(operation);
