@@ -1,8 +1,6 @@
 import model.Calculator;
 import model.CalculatorException;
-import org.testng.Assert;
 import org.testng.annotations.DataProvider;
-import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
 

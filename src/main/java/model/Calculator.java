@@ -1,14 +1,7 @@
 package model;
-
-
-import org.testng.annotations.Ignore;
-import org.testng.reporters.jq.Main;
-
-import java.util.Scanner;
-
 import static java.lang.Integer.parseInt;
 
-public class Calculator extends Main{
+public class Calculator {
   //  static Scanner scanner = new Scanner(System.in);
     public static String execute(String[]params) throws Exception {
         int a = parseInt(params[0]);
