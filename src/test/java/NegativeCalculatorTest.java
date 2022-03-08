@@ -12,14 +12,6 @@ public class NegativeCalculatorTest  {
                    {"+", "18", "101"},
                    {"-", "9", "7"},
                     {"*", "50", "2"},
-                    {"/", "1", "0"},
-                    {"/", "-1.1", "-0.0"},
-                    {"+", "null", "null"},
-                    {"-", "one", "two"},
-                    {"plus", "1", "1"},
-                    {"+", "2147483647", "1"},
-                    {"+", "-2147483647", "-1"}
-
                   // {"18","-101","+"},
                 //   {"9","7","-"},
                  //   {"50","2","*"},
@@ -31,9 +23,9 @@ public class NegativeCalculatorTest  {
        if (b.equals("0") ){
     throw  new CalculatorException("CalculatorException");
         }
-        else{
-            Assert.assertNotEquals(Calculator.execute(new String[]{a,c,b}), "Значения равны");
-        }
+      //  else{
+      //      Assert.assertNotEquals(Calculator.execute(new String[]{a,c,b}), "Значения равны");
+     //   }
     }
 
 }
