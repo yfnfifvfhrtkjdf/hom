@@ -1,8 +1,11 @@
 package model;
 
-public class Calculator {
+import org.testng.reporters.jq.Main;
 
-    public static String execute(String[] params)  {
+public class Calculator  {
+
+
+    public static String execute(String[]params) {
     int a = Integer.parseInt(params[0]);
         int b = Integer.parseInt(params[2]);
         int operation = 0;
@@ -10,8 +13,15 @@ public class Calculator {
             case "+": operation = a+b; break;
             case "-": operation = a-b; break;
             case "*": operation = a*b; break;
-           // case "/": operation = a/b; break;
+            case "/": operation = a/b; break;
         }
-        return  String.valueOf(operation);
+        return String.valueOf(operation);
+        //  return AssertionError.toString();
     }
+    //  protected static String execute(String s, String s1, String s2) {
+  // return execute();
+  //  }
+
+
+
 }
