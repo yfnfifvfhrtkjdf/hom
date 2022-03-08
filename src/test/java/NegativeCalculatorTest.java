@@ -16,7 +16,7 @@ public class NegativeCalculatorTest  {
     }
 
     @Test(dataProvider = "negativeData")
-    public void negativeTest(String c, String a, String b)  throws RuntimeException {
+    public void negativeTest(String c, String a, String b)  throws CalculatorException {
             if (b.equals("0")){
          throw  new CalculatorException("CalculatorException");
     }
