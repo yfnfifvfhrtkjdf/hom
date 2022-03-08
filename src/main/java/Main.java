@@ -17,16 +17,9 @@ public class Main {
 
         String line1 = in.nextLine();
         System.out.println(line1);
-        try {
-            Calculator.execute(new String[]{line, operation, line1});
-        } catch (CalculatorException e) {
-            e.printStackTrace();
-        }
-        try {
+
             System.out.println("Результат операции: " + Calculator.execute(new String[]{line, operation, line1}));
-        } catch (CalculatorException e) {
-            e.printStackTrace();
-        }
+
     }
 }
 

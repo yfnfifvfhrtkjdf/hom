@@ -10,7 +10,7 @@ import static java.lang.Integer.parseInt;
 
 public class Calculator {
   //  static Scanner scanner = new Scanner(System.in);
-    public static String execute(String[]params) throws CalculatorException {
+    public static String execute(String[]params) {
         int a = parseInt(params[0]);
         int b = parseInt(params[2]);
         int operation = 0;
