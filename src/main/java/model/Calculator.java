@@ -17,9 +17,7 @@ public class Calculator  {
         return String.valueOf(operation);
         //  return AssertionError.toString();
     }
-    //  protected static String execute(String s, String s1, String s2) {
-  // return execute();
-  //  }
+
 
 
 

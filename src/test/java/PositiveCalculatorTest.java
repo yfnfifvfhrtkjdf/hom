@@ -15,7 +15,7 @@ public class PositiveCalculatorTest {
     }
 
     @Test(dataProvider = "positiveData")
-    public void   positiveTest( String c, String a, String b, String result) throws NumberFormatException{
+    public void   positiveTest( String c, String a, String b, String result) throws RuntimeException{
 
         Assert.assertEquals(result, Calculator.execute(new  String[]{a,c,b}), "AssertionError");
     }
