@@ -3,7 +3,7 @@ import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-public class PositiveCalculatorTest {
+public class PositiveCalculatorTest extends Calculator{
 
     @DataProvider
     public Object[][] positiveData (){
@@ -15,7 +15,7 @@ public class PositiveCalculatorTest {
     }
 
     @Test(dataProvider = "positiveData")
-    public void   positiveTest( String c, String a, String b, String result) throws RuntimeException{
+    public void   positiveTest( String c, String a, String b, String result) throws AssertionError{
 
         Assert.assertEquals(result, Calculator.execute(new  String[]{a,c,b}), "AssertionError");
     }
