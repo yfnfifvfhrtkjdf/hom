@@ -5,6 +5,9 @@ import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import static org.testng.AssertJUnit.assertEquals;
+import static org.testng.AssertJUnit.assertNotNull;
+
 public class NegativeCalculatorTest extends Calculator {
     @DataProvider
     public Object[][] negativeData() throws CalculatorException {
@@ -21,7 +24,7 @@ public class NegativeCalculatorTest extends Calculator {
             if (a.equals("") && b.equals("") & a.equals("0") || c.equals("/")) {
                 throw new CalculatorException("CalculatorException");
             } else {
-                Assert.assertNotEquals(Calculator.execute(new String[]{a, c, b}), "Значения равны");
+                assertNotNull(Calculator.execute(new String[]{a, c, b}), "Значения равны");
 
             }
         }catch (Exception e){

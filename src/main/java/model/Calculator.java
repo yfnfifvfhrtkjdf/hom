@@ -11,10 +11,11 @@ public class Calculator {
                 switch (params[1]) {
                     case "+":
                         operation = a + b;
-                      //  break;
-                       // throw new CalculatorException("CalculatorException");
+                       break;
+                      // throw new CalculatorException("CalculatorException");
                 }
             }catch (Exception e){
+                e.printStackTrace();
                // throw new CalculatorException("CalculatorException");
 
             }
@@ -22,30 +23,32 @@ public class Calculator {
                 switch (params[1]) {
                     case "-":
                         operation = a - b;
-                       // break;
+                       break;
                        // throw new CalculatorException("CalculatorException");
                 }
             }catch (Exception e){
               //  throw new CalculatorException("CalculatorException");
+                e.printStackTrace();
             }
             try {
                 switch (params[1]) {
                     case "*":
                         operation = a * b;
-
+break;
                 }
             }catch (Exception e){
                // throw new CalculatorException("CalculatorException");
-
+e.printStackTrace();
             }
             try {
                 switch (params[1]) {
                     case "/":
                         operation = a / b;
-
+break;
                 }
             }catch (Exception e){
               //  throw new CalculatorException("CalculatorException");
+                e.printStackTrace();
             }
 
         return String.valueOf(operation);
