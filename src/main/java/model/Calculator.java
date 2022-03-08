@@ -8,9 +8,9 @@ import java.util.Scanner;
 
 import static java.lang.Integer.parseInt;
 
-public class Calculator {
+public class Calculator extends Main{
   //  static Scanner scanner = new Scanner(System.in);
-    public static String execute(String[]params) {
+    public static String execute(String[]params) throws Exception {
         int a = parseInt(params[0]);
         int b = parseInt(params[2]);
         int operation = 0;
@@ -22,7 +22,7 @@ public class Calculator {
                        // throw new CalculatorException("CalculatorException");
                 }
             }catch (Exception e){
-                e = new CalculatorException("CalculatorException");
+                throw new CalculatorException("CalculatorException");
 
             }
             try {
@@ -33,30 +33,26 @@ public class Calculator {
                        // throw new CalculatorException("CalculatorException");
                 }
             }catch (Exception e){
-              //  throw new CalculatorException("CalculatorException");
-                e = new CalculatorException("CalculatorException");
+                throw new CalculatorException("CalculatorException");
             }
             try {
                 switch (params[1]) {
                     case "*":
                         operation = a * b;
-                    //    break;
-                       // throw new CalculatorException("CalculatorException");
+
                 }
             }catch (Exception e){
-               // throw new CalculatorException("CalculatorException");
-                e = new CalculatorException("CalculatorException");
+                throw new CalculatorException("CalculatorException");
+
             }
             try {
                 switch (params[1]) {
                     case "/":
                         operation = a / b;
-                      //  throw new CalculatorException("CalculatorException");
-                       // break;
+
                 }
             }catch (Exception e){
-                e = new CalculatorException("CalculatorException");
-               // throw new CalculatorException("CalculatorException");
+                throw new CalculatorException("CalculatorException");
             }
 
         return String.valueOf(operation);

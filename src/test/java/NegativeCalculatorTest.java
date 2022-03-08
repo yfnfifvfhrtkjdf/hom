@@ -17,10 +17,15 @@ public class NegativeCalculatorTest extends Calculator {
 
     @Test(dataProvider = "negativeData")
     public void negativeTest(String c, String a, String b) throws CalculatorException {
-        if (a.equals("") && b.equals("") & a.equals("0") || c.equals("/")) {
+        try {
+            if (a.equals("") && b.equals("") & a.equals("0") || c.equals("/")) {
+                throw new CalculatorException("CalculatorException");
+            } else {
+                Assert.assertNotEquals(Calculator.execute(new String[]{a, c, b}), "Значения равны");
+
+            }
+        }catch (Exception e){
             throw new CalculatorException("CalculatorException");
-        } else {
-            Assert.assertNotEquals(Calculator.execute(new String[]{a, c, b}), "Значения равны");
 
         }
 
