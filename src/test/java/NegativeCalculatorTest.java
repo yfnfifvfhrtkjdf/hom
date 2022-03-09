@@ -2,7 +2,6 @@ import model.Calculator;
 import model.CalculatorException;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import static org.testng.AssertJUnit.assertNotNull;
 
 public class NegativeCalculatorTest  {
 
@@ -12,7 +11,6 @@ public class NegativeCalculatorTest  {
                 {"+", "18", "101"},
                 {"-", "9", "7"},
                 {"*", "50", "2"},
-
         };
     }
 

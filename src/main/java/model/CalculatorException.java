@@ -1,6 +1,10 @@
 package model;
 
-public class CalculatorException extends RuntimeException{
-    public CalculatorException(String CalculatorException) {
+public class CalculatorException extends  Exception{
+
+
+    public CalculatorException(String message) {
+        super(message);
     }
+
 }
