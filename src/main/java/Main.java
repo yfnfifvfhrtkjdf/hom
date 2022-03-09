@@ -9,6 +9,7 @@ public class Main {
 
     public static void main(String[] args){
         Scanner in = new Scanner(System.in);
+       // Calculator.getInt(number1);
         System.out.print("Введите первое целое число: ");
 
    //     System.out.println(Calculator.getInt(number1));

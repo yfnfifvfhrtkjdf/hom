@@ -1,58 +1,51 @@
 package model;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.util.Scanner;
-
 import static java.lang.Integer.parseInt;
 
 public class Calculator  {
     static Scanner in = new Scanner(System.in);
-int a;
-int b;
-int operation;
+
+
     public static String execute(String[]params) {
-       // int a = parseInt(params[0]);
-      //  int b = parseInt(params[2]);
-      //  int operation = 0;
+       int a = parseInt(params[0]);
+       int b = parseInt(params[2]);
+        int operation =0;
 
 
-    /*        try {
-                switch (params[1]) {case "+":operation = a + b; break;}
-            }catch (Exception e){
-                try {
-                    throw new CalculatorException("CalculatorException");
-                } catch (CalculatorException ex) {
-                    ex.printStackTrace();
-                }
+            try { switch (params[1]) {case "+":operation = a + b;break;}
+               // throw new CalculatorException("CalculatorException");
+            } catch (Exception e) {
+                e.printStackTrace();
             }
-            try {
-                switch (params[1]) {case "-":operation = a - b;break;}
-                throw new CalculatorException("CAL");
-            }catch (Exception e){
-                try {
-                    throw new CalculatorException("CalculatorException");
-                } catch (CalculatorException ex) {
-                    ex.printStackTrace();
-                }
+
+
+                    try { switch (params[1]) {case "-":operation = a - b;break;}
+                       // throw  new CalculatorException("CalculatorException");
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+
+
+
+
+            try { switch (params[1]) {case "*":operation = a * b;break;}
+               // throw new CalculatorException("CalculatorException");
+            } catch (Exception e) {
+                e.printStackTrace();
             }
-            try {
-                switch (params[1]) { case "*": operation = a * b;break; }
-                throw new CalculatorException("CAL");
-            }catch (Exception e){
-                try {
-                    throw new CalculatorException("CalculatorException");
-                } catch (CalculatorException ex) {
-                    ex.printStackTrace();
-                }
+
+
+            try {switch (params[1]) {case "/":operation = a / b;break;}
+             //   throw new CalculatorException("CalculatorException");
+            } catch (Exception e) {
+                e.printStackTrace();
             }
-            try {
-                switch (params[1]) {  case "/": operation = a / b;break;}
-                throw new CalculatorException("CAL");
-            }catch (Exception e){
-                try {
-                    throw new CalculatorException("CalculatorException");
-                } catch (CalculatorException ex) {
-                    ex.printStackTrace();
-                }
-            }
+
+
+
+
 
         return String.valueOf(operation);
         }
@@ -77,7 +70,6 @@ int operation;
             operation = getOperation(operation);
         }
         return operation;
-   */
-        return null;
+
     }
     }

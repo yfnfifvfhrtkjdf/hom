@@ -12,14 +12,14 @@ public class NegativeCalculatorTest  {
                 {"+", "18", "101"},
                 {"-", "9", "7"},
                 {"*", "50", "2"},
-              //  {"/", "6", "0"},
-              //  {"plus", "7", "two"}
+               {"/", "6", "0"},
+              {"plus", "7", "two"}
         };
     }
 
     @Test(dataProvider = "negativeData")
     public void negativeTest(String c, String a, String b) throws CalculatorException {
-        try {
+       try {
             if (a.equals("") && b.equals("") & a.equals("0") || c.equals("/")) {
                 throw new CalculatorException("CalculatorException");
             } else {
@@ -32,5 +32,5 @@ public class NegativeCalculatorTest  {
         }
 
 
-    }
+   }
 }
