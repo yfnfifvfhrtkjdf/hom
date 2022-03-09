@@ -2,27 +2,72 @@ package model;
 import java.util.Scanner;
 import static java.lang.Integer.parseInt;
 
-public class Calculator  {
+public class Calculator {
     static Scanner in = new Scanner(System.in);
+    String num = in.nextLine();
+    String operation = in.nextLine();
 
-
-    public static String execute(String[]params) {
+    public static String execute(String[] params) {
         int a = parseInt(params[0]);
         int b = parseInt(params[2]);
-        int result =0;
+       int result = 0;
         switch (params[1]) {case ("+"):result = a + b;break;}
 
-        switch (params[1]) {case ("+"):result = a + b;break;}
+        switch (params[1]) {
+            case ("+"):
+                result = a + b;
+                break;
+        }
 
-        switch (params[1]) {case ("-"):result = a - b;break;}
+        switch (params[1]) {
+            case ("-"):
+                result = a - b;
+                break;
+        }
 
-        switch (params[1]) {case ("*"):result = a * b;break;}
+        switch (params[1]) {
+            case ("*"):
+                result = a * b;
+                break;
+        }
 
-        switch (params[1]) {case ("/"):result = a / b;break;}
+        switch (params[1]) {
+            case ("/"):
+                result = a / b;
+                break;
+        }
 
-return String.valueOf(result);
+        return String.valueOf(result);
+
     }
 }
+  /*  public static String getInt(String num){
+        Scanner in = new Scanner(System.in);
+        num = in.nextLine();
+        System.out.println("ЧИСЛО ");
+        //num=in.nextLine();
+        if (in.hasNextLine()){
+            num = in.nextLine();
+        }else {
+            System.out.println("Вы допустили ошибку при вводе числа. Попробуйте еще раз.");
+            in.next();//рекурсия
+            num = getInt(num);
+        }
+        return num;
+    }
+
+    public static String getOperation(String operation) {
+        System.out.println("Введите операцию:");
+        if (in.hasNextLine()) {
+            operation = in.nextLine();
+        } else {
+            System.out.println("Вы допустили ошибку при вводе операции. Попробуйте еще раз.");
+            in.next();//рекурсия
+            operation = getOperation(operation);
+        }
+        return operation;
+  */
+
 /*
 
 

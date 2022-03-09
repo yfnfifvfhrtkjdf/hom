@@ -6,9 +6,14 @@ public class Main {
   public   static Scanner in = new Scanner(System.in);
     private static String number1;
     private static String number2;
-
+    private static String operation;
     public static void main(String[] args){
-        Scanner in = new Scanner(System.in);
+       // Calculator.execute(new String[]{ Calculator.getInt(number1),Calculator.getOperation(operation), Calculator.getInt(number2)});
+       // System.out.println("Результат:"+Calculator.execute(new String[]{ Calculator.getInt(number1),Calculator.getOperation(operation), Calculator.getInt(number2)}));
+      //  Calculator.getInt(number1);
+     //   Calculator.getOperation(operation);
+     //   Calculator.getInt(number2);
+   /*     Scanner in = new Scanner(System.in);
        // Calculator.getInt(number1);
         System.out.print("Введите первое целое число: ");
 
@@ -27,6 +32,6 @@ public class Main {
 
       ///  System.out.println(Calculator.getOperation(mathOperation));
         System.out.println("Результат:"+Calculator.execute(new String[]{number1,mathOperation,number2}));
-    }
+   */ }
 }
 
