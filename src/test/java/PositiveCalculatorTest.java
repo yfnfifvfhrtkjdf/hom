@@ -19,19 +19,9 @@ public class PositiveCalculatorTest  {
     }
 
     @Test(dataProvider = "positiveData")
-    public void positiveTest(String c, String a, String b, String result) throws CalculatorException {
-        try {
-            if (a.equals("") && b.equals("") & c.equals("")) {
-               // throw new CalculatorException("CalculatorException");
-            } else {
-                assertNotNull(Calculator.execute(new String[]{a, c, b}), "Значения равны");
-
-            }
-        }catch (Exception e){
-            throw new CalculatorException("CalculatorException");
-
-        }
-
+    public void positiveTest(String c, String a, String b, String result) {
+        System.out.println( a + c +b+ "=" + result);
+        Calculator.execute(new String[]{a,c,b});
 
    }
 }

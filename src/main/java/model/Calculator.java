@@ -1,6 +1,4 @@
 package model;
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
 import java.util.Scanner;
 import static java.lang.Integer.parseInt;
 
@@ -9,19 +7,27 @@ public class Calculator  {
 
 
     public static String execute(String[]params) {
-       int a = parseInt(params[0]);
-       int b = parseInt(params[2]);
-        int operation =0;
+        int a = parseInt(params[0]);
+        int b = parseInt(params[2]);
+        int result =0;
+        switch (params[1]) {case ("+"):result = a + b;break;}
+
+        switch (params[1]) {case ("+"):result = a + b;break;}
+
+        switch (params[1]) {case ("-"):result = a - b;break;}
+
+        switch (params[1]) {case ("*"):result = a * b;break;}
+
+        switch (params[1]) {case ("/"):result = a / b;break;}
+
+return String.valueOf(result);
+    }
+}
+/*
 
 
-            try { switch (params[1]) {case "+":operation = a + b;break;}
-               // throw new CalculatorException("CalculatorException");
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
 
-
-                    try { switch (params[1]) {case "-":operation = a - b;break;}
+                    try { switch (params[1]) {case "-":result = a - b;break;}
                        // throw  new CalculatorException("CalculatorException");
                     } catch (Exception e) {
                         e.printStackTrace();
@@ -30,14 +36,16 @@ public class Calculator  {
 
 
 
-            try { switch (params[1]) {case "*":operation = a * b;break;}
+            try { switch (params[1]) {case "*":
+                result = a * b;break;}
                // throw new CalculatorException("CalculatorException");
             } catch (Exception e) {
                 e.printStackTrace();
             }
 
 
-            try {switch (params[1]) {case "/":operation = a / b;break;}
+            try {switch (params[1]) {case "/":
+                result = a / b;break;}
              //   throw new CalculatorException("CalculatorException");
             } catch (Exception e) {
                 e.printStackTrace();
@@ -47,7 +55,7 @@ public class Calculator  {
 
 
 
-        return String.valueOf(operation);
+        return String.valueOf(result);
         }
     public static String getInt(String num){
         System.out.println("1 ЧИСЛО ");
@@ -69,7 +77,6 @@ public class Calculator  {
             in.next();//рекурсия
             operation = getOperation(operation);
         }
-        return operation;
 
-    }
-    }
+
+   */

@@ -12,23 +12,16 @@ public class NegativeCalculatorTest  {
                 {"+", "18", "101"},
                 {"-", "9", "7"},
                 {"*", "50", "2"},
+
         };
     }
 
     @Test(dataProvider = "negativeData")
     public void negativeTest(String c, String a, String b) throws CalculatorException {
-       try {
-            if (a.equals("") && b.equals("") & a.equals("0") || c.equals("/")) {
-                throw new CalculatorException("CalculatorException");
-            } else {
-                assertNotNull(Calculator.execute(new String[]{a, c, b}), "Значения равны");
 
-            }
-        }catch (Exception e){
+        try { Calculator.execute(new String[]{a,c,b});
+        }catch (Exception e) {
             throw new CalculatorException("CalculatorException");
-
         }
-
-
    }
 }
