@@ -1,20 +1,19 @@
-
 import model.Calculator;
 import model.CalculatorException;
-import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-
-import static org.testng.AssertJUnit.assertEquals;
 import static org.testng.AssertJUnit.assertNotNull;
 
-public class NegativeCalculatorTest extends Calculator {
+public class NegativeCalculatorTest  {
+
     @DataProvider
-    public Object[][] negativeData() throws CalculatorException {
+    public Object[][] negativeData()  {
         return new Object[][]{
                 {"+", "18", "101"},
                 {"-", "9", "7"},
                 {"*", "50", "2"},
+              //  {"/", "6", "0"},
+              //  {"plus", "7", "two"}
         };
     }
 

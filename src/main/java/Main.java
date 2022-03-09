@@ -4,44 +4,28 @@ import java.util.Scanner;
 
 public class Main {
   public   static Scanner in = new Scanner(System.in);
+    private static String number1;
+    private static String number2;
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args){
         Scanner in = new Scanner(System.in);
-        String line = getInt();
-        String line1 = getInt();
-        String operation = getOperation();
+        System.out.print("Введите первое целое число: ");
 
-        System.out.println("Результат операции: " + Calculator.execute(new String[]{line, operation, line1}));
-        System.out.println(operation);
-        System.out.println(line);
-        System.out.println(line1);
+   //     System.out.println(Calculator.getInt(number1));
+        String number1 = in.nextLine();
+   //     System.out.println(Calculator.getInt(number2));
+        System.out.print("Введите арифметическую операцию + - или *: ");
+        String mathOperation = in.nextLine();
+
+
+        System.out.print("Введите второе целое число: ");
+        String number2 = in.nextLine();
+
+
+
+
+      ///  System.out.println(Calculator.getOperation(mathOperation));
+        System.out.println("Результат:"+Calculator.execute(new String[]{number1,mathOperation,number2}));
     }
-    public static String getInt(){
-        System.out.println("1 ЧИСЛО ");
-        String num;
-        if (in.hasNextLine()){
-            num = in.nextLine();
-    }else {
-            System.out.println("Вы допустили ошибку при вводе числа. Попробуйте еще раз.");
-            in.next();//рекурсия
-            num = getInt();
-        }
-        return num;
-    }
-    public static String getOperation(){
-        System.out.println("Введите операцию:");
-        String operation;
-        if(in.hasNextLine()){
-            operation = in.nextLine();
-        } else {
-            System.out.println("Вы допустили ошибку при вводе операции. Попробуйте еще раз.");
-            in.next();//рекурсия
-            operation = getOperation();
-        }
-        return operation;
-    }
-
-
-
 }
 
