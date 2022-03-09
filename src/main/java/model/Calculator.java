@@ -40,6 +40,7 @@ public class Calculator {
         return String.valueOf(result);
 
     }
+
 }
   /*  public static String getInt(String num){
         Scanner in = new Scanner(System.in);
