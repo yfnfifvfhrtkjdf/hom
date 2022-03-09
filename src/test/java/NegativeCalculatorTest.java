@@ -12,8 +12,6 @@ public class NegativeCalculatorTest  {
                 {"+", "18", "101"},
                 {"-", "9", "7"},
                 {"*", "50", "2"},
-               {"/", "6", "0"},
-              {"plus", "7", "two"}
         };
     }
 
