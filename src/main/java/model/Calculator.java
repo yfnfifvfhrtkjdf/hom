@@ -1,50 +1,54 @@
 package model;
 
 
-import org.testng.reporters.jq.Main;
+public class Calculator {
 
-import java.text.Format;
+    public static String execute1(String[] params) {
+        Double a1 = Double.parseDouble(params[0]);
+        Double b1 = Double.parseDouble(params[2]);
+        double result1=0;
+        switch (params[1]) {
+            case "+":
+                result1 = a1 + b1;
+        }
+        switch (params[1]) {case ("-"):
+            result1 = a1 - b1;
+        }
 
-public class Calculator extends Main {
+        switch (params[1]) {case ("*"):
+            result1 = a1 * b1;
+        }
 
-
+        switch (params[1]) {case ("/"):
+            result1 = a1 / b1;
+        }
+        return String.valueOf(result1);
+    }
     public static String execute(String[] params) {
-      //  Double a = Double.parseDouble(params[0]);
-      //  Double b = Double.parseDouble(params[2]);
+
+
 
         int a = Integer.parseInt(params[0]);
-        System.out.println(a);
         int b = Integer.parseInt(params[2]);
-        System.out.println(b);
         int result = 0;
-        System.out.println(result);
-      // Double a = Double.parseDouble(params[0]);
-
-       // System.out.println(a);
-      //  Double b = Double.parseDouble(params[2]);
-      //  System.out.println(b);
-     //  double result=0;
         String operator = params[1];
-
         switch (params[1]) {
-            case ("+"):result = a + b;
-                return String.valueOf(result);
+            case "+":
+                result = a + b;
         }
         switch (params[1]) {case ("-"):
                 result = a - b;
-                return String.valueOf(result);
         }
 
         switch (params[1]) {case ("*"):
                 result = a * b;
-                return String.valueOf(result);
         }
 
         switch (params[1]) {case ("/"):
                 result = a / b;
-                return String.valueOf(result);
         }
         return String.valueOf(result);
+
     }
 }
 
