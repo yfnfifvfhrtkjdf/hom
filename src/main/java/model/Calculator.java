@@ -2,28 +2,6 @@ package model;
 
 
 public class Calculator {
-
-    public static String execute1(String[] params) {
-        Double a1 = Double.parseDouble(params[0]);
-        Double b1 = Double.parseDouble(params[2]);
-        double result1=0;
-        switch (params[1]) {
-            case "+":
-                result1 = a1 + b1;
-        }
-        switch (params[1]) {case ("-"):
-            result1 = a1 - b1;
-        }
-
-        switch (params[1]) {case ("*"):
-            result1 = a1 * b1;
-        }
-
-        switch (params[1]) {case ("/"):
-            result1 = a1 / b1;
-        }
-        return String.valueOf(result1);
-    }
     public static String execute(String[] params) {
 
 
