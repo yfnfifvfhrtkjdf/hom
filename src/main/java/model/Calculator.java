@@ -1,29 +1,42 @@
 package model;
 
 
+import java.math.BigDecimal;
+import java.math.MathContext;
+
+import static com.sun.javafx.fxml.expression.Expression.divide;
+
 public class Calculator {
+    private double one;
+    private double two;
+private  double result;
+
     public static String execute(String[] params) {
-
-
-
-        int a = Integer.parseInt(params[0]);
-        int b = Integer.parseInt(params[2]);
-        int result = 0;
+        double a= Double.parseDouble(params[0]);
+        BigDecimal f1 = new BigDecimal(params[0]);
+        double b= Double.parseDouble(params[2]);
+        BigDecimal f2 = new BigDecimal(params[2]);
+        double result = 0;
+        BigDecimal f3 = new BigDecimal(result);
+        MathContext mc= new MathContext(3);
         String operator = params[1];
         switch (params[1]) {
             case "+":
-                result = a + b;
+      return f1.add(f2).toString();
         }
         switch (params[1]) {case ("-"):
-                result = a - b;
+           return f1.subtract(f2).toString();
         }
 
         switch (params[1]) {case ("*"):
-                result = a * b;
+           return f1.multiply(f2).toString();
         }
 
         switch (params[1]) {case ("/"):
-                result = a / b;
+            System.out.println(f1);
+            System.out.println(f2);
+            System.out.println(f3);
+            return f1.divide(f2, mc).toString();
         }
         return String.valueOf(result);
 
