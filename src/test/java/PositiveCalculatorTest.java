@@ -5,7 +5,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 
-public class PositiveCalculatorTest {
+public class PositiveCalculatorTest extends Calculator{
 
     @DataProvider
     public Object[][] positiveData() {
@@ -22,12 +22,15 @@ public class PositiveCalculatorTest {
     }
 
     @Test(dataProvider = "positiveData")
-    public void positiveTest(String c, String a, String b, String result) {
-        System.out.println(a + c + b + "=" + result);
-
-            Assert.assertNotEquals(result, Calculator.execute(new String[]{a, c, b}), "Значения не равны");
-
-
-
+    public void positiveTest(String b, String a, String c, String result) {
+        System.out.println(b);
+        System.out.println(a);
+        System.out.println(c);
+      //  System.out.println(a + b + c + "=" + result);
+try {
+    Assert.assertEquals(result, Calculator.execute(new String[]{b, a, c}), "Значения не равны");
+}catch (CalculatorException e){
+    e.printStackTrace();
+}
     }
 }
