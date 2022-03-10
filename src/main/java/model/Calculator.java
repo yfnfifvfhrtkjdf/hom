@@ -1,47 +1,46 @@
 package model;
-import java.util.Scanner;
-import static java.lang.Integer.parseInt;
 
-public class Calculator {
-    static Scanner in = new Scanner(System.in);
-    String num = in.nextLine();
-    String operation = in.nextLine();
+
+import org.testng.reporters.jq.Main;
+
+public class Calculator extends Main {
+
 
     public static String execute(String[] params) {
-        int a = parseInt(params[0]);
-        int b = parseInt(params[2]);
-       int result = 0;
-        switch (params[1]) {case ("+"):result = a + b;break;}
+
+       Double a = Double.parseDouble(params[0]);
+
+        System.out.println(a);
+        Double b = Double.parseDouble(params[2]);
+        System.out.println(b);
+       double result=0;
+        String operator = params[1];
 
         switch (params[1]) {
-            case ("+"):
-                result = a + b;
-                break;
+            case ("+"):result = a + b;
+                return String.valueOf(result);
         }
-
-        switch (params[1]) {
-            case ("-"):
+        switch (params[1]) {case ("-"):
                 result = a - b;
-                break;
+                return String.valueOf(result);
         }
 
-        switch (params[1]) {
-            case ("*"):
+        switch (params[1]) {case ("*"):
                 result = a * b;
-                break;
+                return String.valueOf(result);
         }
 
-        switch (params[1]) {
-            case ("/"):
+        switch (params[1]) {case ("/"):
                 result = a / b;
-                break;
+                return String.valueOf(result);
         }
-
         return String.valueOf(result);
-
     }
-
 }
+
+
+
+
   /*  public static String getInt(String num){
         Scanner in = new Scanner(System.in);
         num = in.nextLine();

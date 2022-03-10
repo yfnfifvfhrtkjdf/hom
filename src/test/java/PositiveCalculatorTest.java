@@ -1,10 +1,8 @@
 import model.Calculator;
-import model.CalculatorException;
 import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import static org.testng.AssertJUnit.assertNotNull;
+
 
 public class PositiveCalculatorTest {
 
@@ -21,15 +19,11 @@ public class PositiveCalculatorTest {
 
         };
     }
-
     @Test(dataProvider = "positiveData")
     public void positiveTest(String c, String a, String b, String result) {
         System.out.println(a + c + b + "=" + result);
-
-try {
             Assert.assertEquals(result, Calculator.execute(new String[]{a, c, b}), "Значения не равны");
-    }catch (Exception e) {
-        throw new AssertionError("");
-    }
+
+
     }
 }
