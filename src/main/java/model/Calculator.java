@@ -3,6 +3,7 @@ import org.testng.reporters.jq.Main;
 
 import java.io.UncheckedIOException;
 import java.util.Locale;
+import java.util.Scanner;
 
 public class Calculator extends Main {
 
@@ -95,6 +96,7 @@ public class Calculator extends Main {
                 }
         return res;
     }
+
 }
 
 
