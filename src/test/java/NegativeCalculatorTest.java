@@ -22,11 +22,9 @@ public class NegativeCalculatorTest {
 
     @Test(dataProvider = "negativeData")
     public void negativeTest(String b, String a, String c) throws CalculatorException  {
- try{
+
            Assert.assertNotEquals(Calculator.execute(new String[]{b,a,c}), "НЕПРАВИЛЬНО");
-      }catch (CalculatorException e){
-       e.printStackTrace();
-       }
+
 
 }
 }

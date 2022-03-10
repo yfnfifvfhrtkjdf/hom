@@ -5,7 +5,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 
-public class PositiveCalculatorTest extends Calculator{
+public class PositiveCalculatorTest {
 
     @DataProvider
     public Object[][] positiveData() {
