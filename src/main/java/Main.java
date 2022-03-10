@@ -12,12 +12,12 @@ public class Main {
    // String line=in.nextLine();
     String line=in.nextLine();
     System.out.println("1 "+line);
-  //  Scanner scanner = new Scanner ("Первое число, \n" +"Второе число, \n"+ "Операция \n" );
+
     String line1="";
-   Scanner scanner1=new Scanner(cal.execute(new String[]{line1}));
-    String s = scanner1.nextLine();
-     line1 = scanner1.nextLine();
-    System.out.println(s+cal.execute(new  String[]{line1})+s+s);
+    System.out.println("2 "+line1);
+   String oper = in.nextLine();
+    System.out.println("oper "+oper);
+    System.out.println(cal.execute(new  String[]{line1, line, oper}));
 
    //
   //  String st = cal.execute(new  String[]{line});
