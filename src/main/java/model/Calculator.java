@@ -4,12 +4,8 @@ package model;
 import java.math.BigDecimal;
 import java.math.MathContext;
 
-import static com.sun.javafx.fxml.expression.Expression.divide;
 
 public class Calculator {
-    private double one;
-    private double two;
-private  double result;
 
     public static String execute(String[] params) {
         double a= Double.parseDouble(params[0]);
