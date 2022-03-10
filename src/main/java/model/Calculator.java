@@ -1,168 +1,99 @@
 package model;
-
-
-import java.math.BigDecimal;
-import java.math.MathContext;
-
+import java.io.UncheckedIOException;
+import java.util.Locale;
 
 public class Calculator {
 
     public static String execute(String[] params) {
-        try {
-            double a = Double.parseDouble(params[0]);
-            BigDecimal f1 = new BigDecimal(params[0]);
-            double b = Double.parseDouble(params[2]);
-            BigDecimal f2 = new BigDecimal(params[2]);
-            double result = 0;
-            BigDecimal f3 = new BigDecimal(result);
-            MathContext mc = new MathContext(3);
-            String operator = params[1];
-            String exq = String.valueOf(new CalculatorException("CalculatorException"));
-            try {
-                switch (params[1]) {
-                    case "+":
-                        return f1.add(f2).toString();
-                }
-            } catch (Exception e) {
-                try {
-                    throw new CalculatorException("CalculatorException");
-                } catch (CalculatorException ex) {
-                    ex.printStackTrace();
-                }
-            }
-            try {
-                switch (params[1]) {
-                    case ("-"):
-                        return f1.subtract(f2).toString();
-                }
-            } catch (Exception e) {
-                try {
-                    throw new CalculatorException("CalculatorException");
-                } catch (CalculatorException ex) {
-                    ex.printStackTrace();
-                }
-            }
-            try {
-                switch (params[1]) {
-                    case ("*"):
-                        return f1.multiply(f2).toString();
-                }
-            } catch (Exception e) {
-                try {
-                    throw new CalculatorException("CalculatorException");
-                } catch (CalculatorException ex) {
-                    ex.printStackTrace();
-                }
-            }
-            try {
 
-                switch (params[1]) {
-                    case ("/"):
-                        return f1.divide(f2, mc).toString();
-                }
-            } catch (Exception e) {
+        int in = 0;
+        double dou = 0.0;
+        String res = "";
+
+
+        switch(params[0]) {
+            case "+":
                 try {
-                    throw new CalculatorException("CalculatorException");
+                    if (params[1].equals(String.valueOf(Integer.MAX_VALUE)) || params[2].equals(String.valueOf(Integer.MAX_VALUE)) ||
+                            params[1].equals(String.valueOf(Integer.MIN_VALUE)) || params[2].equals(Integer.MIN_VALUE)) {
+                        throw new CalculatorException();
+                    }
+                    int one = Integer.parseInt(params[1]);
+                    int two = Integer.parseInt(params[2]);
+                    in = one + two;
+                    res = Integer.toString(in);
+                    break;
+                }catch (Exception e) {
+                    try {
+                        throw new CalculatorException();
+                    } catch (CalculatorException ex) {
+                        ex.printStackTrace();
+                    }
+                }
+
+            case "-":
+                try {
+                    double a1 = Double.parseDouble(params[1]);
+                    double b1 = Double.parseDouble(params[2]);
+                    dou = a1 - b1;
+                    res = Double.toString(dou);
+                    break;
+                }catch (Exception e) {
+                    try {
+                        throw new CalculatorException();
+                    } catch (CalculatorException ex) {
+                        ex.printStackTrace();
+                    }
+                }
+
+            case "*":
+                try {
+                    double a2 = Double.parseDouble(params[1]);
+                    double b2 = Double.parseDouble(params[2]);
+                    dou = a2 * b2;
+                    res = Double.toString(dou);
+                    break;
+                }
+                catch (Exception e) {
+                    try {
+                        throw new CalculatorException();
+                    } catch (CalculatorException ex) {
+                        ex.printStackTrace();
+                    }
+                }
+
+            case "/":
+                if (params[2].equals("0") || (params[2]).equals("0.0") || params[2].equals("-0.0")) {
+                    try {
+                        throw new CalculatorException();
+                    } catch (CalculatorException e) {
+                        e.printStackTrace();
+                    }
+                }
+            try{
+                double a3 = Double.parseDouble(params[1]);
+                double b3 = Double.parseDouble(params[2]);
+                dou = a3 / b3;
+                res = String.format(Locale.ROOT, "%.3f", dou);
+                break;
+            }
+            catch (Exception e) {
+                try {
+                    throw new CalculatorException();
                 } catch (CalculatorException ex) {
                     ex.printStackTrace();
                 }
             }
-            return String.valueOf(exq);
-
-        } catch (Exception e){
-            try {
-                throw new  CalculatorException("CalculatorException");
-            } catch (CalculatorException ex) {
-                ex.printStackTrace();
-            }
-        }return null;
+            default:
+                try {
+                    throw new CalculatorException();
+                } catch (CalculatorException e) {
+                    e.printStackTrace();
+                }
+        }
+        return res;
     }
 }
 
 
 
-
-  /*  public static String getInt(String num){
-        Scanner in = new Scanner(System.in);
-        num = in.nextLine();
-        System.out.println("ЧИСЛО ");
-        //num=in.nextLine();
-        if (in.hasNextLine()){
-            num = in.nextLine();
-        }else {
-            System.out.println("Вы допустили ошибку при вводе числа. Попробуйте еще раз.");
-            in.next();//рекурсия
-            num = getInt(num);
-        }
-        return num;
-    }
-
-    public static String getOperation(String operation) {
-        System.out.println("Введите операцию:");
-        if (in.hasNextLine()) {
-            operation = in.nextLine();
-        } else {
-            System.out.println("Вы допустили ошибку при вводе операции. Попробуйте еще раз.");
-            in.next();//рекурсия
-            operation = getOperation(operation);
-        }
-        return operation;
-  */
-
-/*
-
-
-
-                    try { switch (params[1]) {case "-":result = a - b;break;}
-                       // throw  new CalculatorException("CalculatorException");
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-
-
-
-
-            try { switch (params[1]) {case "*":
-                result = a * b;break;}
-               // throw new CalculatorException("CalculatorException");
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-
-
-            try {switch (params[1]) {case "/":
-                result = a / b;break;}
-             //   throw new CalculatorException("CalculatorException");
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-
-
-
-
-
-        return String.valueOf(result);
-        }
-    public static String getInt(String num){
-        System.out.println("1 ЧИСЛО ");
-        if (in.hasNextLine()){
-            num = in.nextLine();
-        }else {
-            System.out.println("Вы допустили ошибку при вводе числа. Попробуйте еще раз.");
-            in.next();//рекурсия
-            num = getInt(num);
-        }
-        return num;
-    }
-    public static String getOperation(String operation){
-        System.out.println("Введите операцию:");
-        if(in.hasNextLine()){
-            operation = in.nextLine();
-        } else {
-            System.out.println("Вы допустили ошибку при вводе операции. Попробуйте еще раз.");
-            in.next();//рекурсия
-            operation = getOperation(operation);
-        }
-
-
-   */

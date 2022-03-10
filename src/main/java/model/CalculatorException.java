@@ -1,10 +1,10 @@
 package model;
 
-public class CalculatorException extends  Exception{
+import java.io.UncheckedIOException;
 
+public class CalculatorException extends Exception {
 
-    public CalculatorException(String message) {
-        super(message);
+    public CalculatorException() {
+        System.out.println("vvvvvv");
     }
-
 }
