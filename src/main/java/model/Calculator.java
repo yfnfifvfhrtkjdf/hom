@@ -3,17 +3,27 @@ package model;
 
 import org.testng.reporters.jq.Main;
 
+import java.text.Format;
+
 public class Calculator extends Main {
 
 
     public static String execute(String[] params) {
+      //  Double a = Double.parseDouble(params[0]);
+      //  Double b = Double.parseDouble(params[2]);
 
-       Double a = Double.parseDouble(params[0]);
-
+        int a = Integer.parseInt(params[0]);
         System.out.println(a);
-        Double b = Double.parseDouble(params[2]);
+        int b = Integer.parseInt(params[2]);
         System.out.println(b);
-       double result=0;
+        int result = 0;
+        System.out.println(result);
+      // Double a = Double.parseDouble(params[0]);
+
+       // System.out.println(a);
+      //  Double b = Double.parseDouble(params[2]);
+      //  System.out.println(b);
+     //  double result=0;
         String operator = params[1];
 
         switch (params[1]) {
