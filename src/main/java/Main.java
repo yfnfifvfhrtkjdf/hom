@@ -1,34 +1,30 @@
-import model.Calculator;
-import org.testng.Assert;
 
+import model.Calculator;
+
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
 
 
   public static void main(String[] args) {
-
+    //  считать из консоли три строки (оператор и два числа),
+    //  затем вызвать на этих данных метод execute класса
+    //  Calculator и вывести результат обратно в консоль.
+    System.out.println("Первое число :");
     Scanner in = new Scanner(System.in);
-    String nam = in.next();
-    String num = in.next();
+    String line = in.nextLine();
+    System.out.println("операция :");
+    String line2 = in.nextLine();
+    System.out.println("Второе число :");
+    String line3 = in.nextLine();
+    System.out.println();
+    System.out.println("Результат:"+ "1: %s 2 %s 3 %s"+ Calculator.execute(new String[]{String.valueOf(line), String.valueOf(line2), String.valueOf(line3)}));
 
-    String number1 = in.nextLine();
-    String mathOperation=in.nextLine();
-    String number2=in.nextLine();
-    //System.out.println("Результат:"+Calculator.execute(new String[]{number1,mathOperation,number2}));
-
-    System.out.print("Введите первое целое число: " + number1);
- //number1 = in.nextLine();
-
-    System.out.print("Введите арифметическую операцию + - или *: ");
-  //   mathOperation = in.nextLine();
-    System.out.print("Введите второе целое число: ");
-  //  number2 = in.nextLine();
-  //  Assert.assertEquals( Calculator.execute(new String[]{number1, mathOperation, number2}), "Значения не равны");
-   //
+  }
   }
 
 
-}
 
 
