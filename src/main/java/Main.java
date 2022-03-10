@@ -7,10 +7,9 @@ public class Main {
 
 
   public static void main(String[] args) {
-   // Scanner in = new Scanner(System.in);
+    Scanner in = new Scanner(System.in);
     Calculator cal = new Calculator();
    // String line=in.nextLine();
- Scanner in = new Scanner(Calculator.execute(new String[]{"","",""}));
     String line=in.nextLine();
     System.out.println("1 "+line);
   //  Scanner scanner = new Scanner ("Первое число, \n" +"Второе число, \n"+ "Операция \n" );
