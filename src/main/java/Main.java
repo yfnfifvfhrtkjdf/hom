@@ -7,17 +7,20 @@ public class Main {
 
 
   public static void main(String[] args) {
+    Calculator calculator = new Calculator();
     Scanner in = new Scanner(System.in);
-    Calculator cal = new Calculator();
-   // String line=in.nextLine();
-    String line=in.nextLine();
-    System.out.println("1 "+line);
-
-    String line1="";
-    System.out.println("2 "+line1);
-   String oper = in.nextLine();
-    System.out.println("oper "+oper);
-    System.out.println(cal.execute(new  String[]{line1, line, oper}));
+    System.out.print("Введите число: ");
+    String number1 = in.nextLine();
+    System.out.println(number1);
+    System.out.print(" + - или *: ");
+    String mathOperation = in.nextLine();
+    System.out.println(mathOperation);
+    System.out.print("Введите число: ");
+    String number2 = in.nextLine();
+    System.out.println(number2);
+    System.out.println("Результат:"+ calculator.execute(new String[]{number1,mathOperation,number2}));
+  }
+}
 
    //
   //  String st = cal.execute(new  String[]{line});
@@ -33,9 +36,7 @@ public class Main {
  //    li = in.nextLine();
  //   System.out.println(li);
  //   return getline(li);
-  }
 
-}
 
 /*
     Calculator calculator = new Calculator();
