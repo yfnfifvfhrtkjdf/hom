@@ -17,14 +17,16 @@ public class NegativeCalculatorTest {
                 {"/", "1", "0"},
                 {"/", "-1.1", "-0.0"},
                 {"+", "null", "null"},
+                {"-", "one", "two"}
         };
     }
 
     @Test(dataProvider = "negativeData")
     public void negativeTest(String c, String a, String b) throws CalculatorException {
-        try { Assert.assertNotEquals(Calculator.execute(new String[]{a,c,b}), "НЕПРАВИЛЬНО");
-        }catch (Exception e) {
-            throw new CalculatorException("");
-        }
+        Assert.assertNotEquals(Calculator.execute(new String[]{a,c,b}), "НЕПРАВИЛЬНО");
+     //     try { Assert.assertNotEquals(Calculator.execute(new String[]{a,c,b}), "НЕПРАВИЛЬНО");
+      //  }catch (Exception e) {
+      //     throw new CalculatorException("CalculatorException");
+      //  }
     }
 }

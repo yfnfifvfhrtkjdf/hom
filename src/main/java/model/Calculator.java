@@ -8,34 +8,74 @@ import java.math.MathContext;
 public class Calculator {
 
     public static String execute(String[] params) {
-        double a= Double.parseDouble(params[0]);
-        BigDecimal f1 = new BigDecimal(params[0]);
-        double b= Double.parseDouble(params[2]);
-        BigDecimal f2 = new BigDecimal(params[2]);
-        double result = 0;
-        BigDecimal f3 = new BigDecimal(result);
-        MathContext mc= new MathContext(3);
-        String operator = params[1];
-        switch (params[1]) {
-            case "+":
-      return f1.add(f2).toString();
-        }
-        switch (params[1]) {case ("-"):
-           return f1.subtract(f2).toString();
-        }
+        try {
+            double a = Double.parseDouble(params[0]);
+            BigDecimal f1 = new BigDecimal(params[0]);
+            double b = Double.parseDouble(params[2]);
+            BigDecimal f2 = new BigDecimal(params[2]);
+            double result = 0;
+            BigDecimal f3 = new BigDecimal(result);
+            MathContext mc = new MathContext(3);
+            String operator = params[1];
+            String exq = String.valueOf(new CalculatorException("CalculatorException"));
+            try {
+                switch (params[1]) {
+                    case "+":
+                        return f1.add(f2).toString();
+                }
+            } catch (Exception e) {
+                try {
+                    throw new CalculatorException("CalculatorException");
+                } catch (CalculatorException ex) {
+                    ex.printStackTrace();
+                }
+            }
+            try {
+                switch (params[1]) {
+                    case ("-"):
+                        return f1.subtract(f2).toString();
+                }
+            } catch (Exception e) {
+                try {
+                    throw new CalculatorException("CalculatorException");
+                } catch (CalculatorException ex) {
+                    ex.printStackTrace();
+                }
+            }
+            try {
+                switch (params[1]) {
+                    case ("*"):
+                        return f1.multiply(f2).toString();
+                }
+            } catch (Exception e) {
+                try {
+                    throw new CalculatorException("CalculatorException");
+                } catch (CalculatorException ex) {
+                    ex.printStackTrace();
+                }
+            }
+            try {
 
-        switch (params[1]) {case ("*"):
-           return f1.multiply(f2).toString();
-        }
+                switch (params[1]) {
+                    case ("/"):
+                        return f1.divide(f2, mc).toString();
+                }
+            } catch (Exception e) {
+                try {
+                    throw new CalculatorException("CalculatorException");
+                } catch (CalculatorException ex) {
+                    ex.printStackTrace();
+                }
+            }
+            return String.valueOf(exq);
 
-        switch (params[1]) {case ("/"):
-            System.out.println(f1);
-            System.out.println(f2);
-            System.out.println(f3);
-            return f1.divide(f2, mc).toString();
-        }
-        return String.valueOf(result);
-
+        } catch (Exception e){
+            try {
+                throw new  CalculatorException("CalculatorException");
+            } catch (CalculatorException ex) {
+                ex.printStackTrace();
+            }
+        }return null;
     }
 }
 
