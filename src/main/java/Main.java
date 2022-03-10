@@ -9,15 +9,19 @@ public class Main {
   public static void main(String[] args) {
     Calculator calculator = new Calculator();
     Scanner in = new Scanner(System.in);
-    System.out.print("Введите число: ");
+    System.out.print("Введите число: "+"");
     String number1 = in.nextLine();
+    System.out.print("Введите число: "+number1);
     System.out.println(number1);
+    in.toString();
     System.out.print(" + - или *: ");
     String mathOperation = in.nextLine();
+    in.toString();
     System.out.println(mathOperation);
     System.out.print("Введите число: ");
     String number2 = in.nextLine();
     System.out.println(number2);
+    in.toString();
     System.out.println("Результат:"+ calculator.execute(new String[]{number1,mathOperation,number2}));
   }
 }
