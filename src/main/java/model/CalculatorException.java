@@ -2,9 +2,6 @@ package model;
 
 import java.io.UncheckedIOException;
 
-public class CalculatorException extends Exception {
+public class CalculatorException extends RuntimeException {
 
-    public CalculatorException() {
-        System.out.println("vvvvvv");
-    }
 }
