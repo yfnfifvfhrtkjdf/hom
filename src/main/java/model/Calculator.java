@@ -5,7 +5,7 @@ import java.io.UncheckedIOException;
 import java.util.Locale;
 import java.util.Scanner;
 
-public class Calculator extends Main {
+public class Calculator {
 
     public static String execute(String[] params) {
         int in = 0;

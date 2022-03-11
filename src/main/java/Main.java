@@ -1,32 +1,52 @@
 import model.Calculator;
-
 import java.util.Scanner;
+import static model.Calculator.execute;
 
-public class Main extends Calculator {
+public class Main  {
 
-
-  public static void main(String[] args)  {
+  public static void main(String[] args) {
     Calculator calculator = new Calculator();
-    Scanner in = new Scanner(System.in);
-    System.out.println("one: ");
-   // System.out.println(calculator.execute(new String[3]));
-    calculator.execute(new String[3]);
-    String s = calculator.execute(new String[0]);
+    execute(new  String[3]);
+    Scanner scan = new Scanner(System.in);
+    System.out.println("Введите число, операцию, второе число");
 
-    s = in.nextLine();
-  //  double d = Double.parseDouble(execute(new String[0]));
-  //   d =in.nextDouble();
-    System.out.println("two ");
-    String s1 = calculator.execute(new String[1]);
-    s1 = in.nextLine();
-    String s2 = calculator.execute(new String[2]);
-    s2 = in.nextLine();
-    System.out.println("Результат: "+ execute(new String[]{s,s1,s2}));
-//execute(new String[]{s, s1, s2});
+    String line1 = scan.nextLine();
+    String line2 = scan.nextLine();
+    String line3 = scan.nextLine();
+    System.out.println(execute (new String[]{line1, line2, line3}));
+    scan.close();
 
+
+
+
+
+
+    System.out.println("операция :");
+
+
+    System.out.println("Второе число :");
+
+
+    System.out.printf("Результат:%s%n", execute(new String[]{line1}));
+    System.out.println("Результат:" + execute(new String[]{line2}));
+    System.out.println("Результат:" + execute(new String[]{line3}));
   }
 }
-  /*  System.out.println( calculator.execute(ew));
+  /*  String[] array = new String[3];
+    array[3]=calculator.execute(new String[3]);
+
+    String s =  array[0];
+    System.out.println("1 +s");
+    array[0]=in.nextLine();
+    String s1 = array[1];
+    array[1]=in.nextLine();
+    array[2]=in.nextLine();
+    String s2 = array[2];
+    System.out.println("Результат: "+ execute(new String[]{s,s1,s2}));
+in.close();
+  }
+}
+ */ /*  System.out.println( calculator.execute(ew));
 
  if (operator.equals("+")) {
         System.out.println("=" + calculator.execute(new String[]{String.valueOf(one), operator, String.valueOf(two)}));
