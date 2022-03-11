@@ -9,13 +9,11 @@ public class Main  {
     System.out.println("операция :");
     String line2 = in.nextLine();
 
-    Scanner in1 = new Scanner(System.in);
     System.out.println("Введите первое число ");
-    String line = in1.nextLine();
+    String line = in.nextLine();
 
-    Scanner in2 = new Scanner(System.in);
     System.out.println("Введите второе число :");
-    String line3 = in2.nextLine();
+    String line3 = in.nextLine();
 
    // String s = execute(new String[]{line2, line,line3 });
    // System.out.println(s);
