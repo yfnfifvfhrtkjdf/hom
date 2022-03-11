@@ -3,80 +3,67 @@ import java.util.Scanner;
 import static model.Calculator.execute;
 
 public class Main  {
-
+  static Scanner scanner = new Scanner(System.in);
   public static void main(String[] args) {
     Calculator calculator = new Calculator();
-    execute(new  String[3]);
-    Scanner scan = new Scanner(System.in);
-    System.out.println("Введите число, операцию, второе число");
+    int num1 = getInt();
+    int num2 = getInt();
+    char operation = getOperation();
+    int result = calc(num1,num2,operation);
+    System.out.println("Результат операции: "+result);
 
-    String line1 = scan.nextLine();
-    String line2 = scan.nextLine();
-    String line3 = scan.nextLine();
-    System.out.println(execute (new String[]{line1, line2, line3}));
-    scan.close();
-
-
-
-
-
-
-    System.out.println("операция :");
-
-
-    System.out.println("Второе число :");
-
-
-    System.out.printf("Результат:%s%n", execute(new String[]{line1}));
-    System.out.println("Результат:" + execute(new String[]{line2}));
-    System.out.println("Результат:" + execute(new String[]{line3}));
+    System.out.println(execute(new String[]{String.valueOf(num1), String.valueOf(operation),String.valueOf(num2)}));
   }
-}
-  /*  String[] array = new String[3];
-    array[3]=calculator.execute(new String[3]);
 
-    String s =  array[0];
-    System.out.println("1 +s");
-    array[0]=in.nextLine();
-    String s1 = array[1];
-    array[1]=in.nextLine();
-    array[2]=in.nextLine();
-    String s2 = array[2];
-    System.out.println("Результат: "+ execute(new String[]{s,s1,s2}));
-in.close();
+  public static int getInt(){
+    System.out.println("Введите число:");
+    int num;
+    if(scanner.hasNextInt()){
+      num = scanner.nextInt();
+    } else {
+      System.out.println("Вы допустили ошибку при вводе числа. Попробуйте еще раз.");
+      scanner.next();//рекурсия
+      num = getInt();
+    }
+    return num;
   }
-}
- */ /*  System.out.println( calculator.execute(ew));
 
- if (operator.equals("+")) {
-        System.out.println("=" + calculator.execute(new String[]{String.valueOf(one), operator, String.valueOf(two)}));
-      }
-      if (operator.equals("-")) {
-        System.out.println("=" + (one - two));
-      }
-      if (operator.equals("*")) {
-        System.out.println("=" + (one * two));
-      }
-      if (operator.equals("/")) {
-        System.out.println("=" + (one / two));
-      }
+  public static char getOperation(){
+    System.out.println("Введите операцию:");
+    char operation;
+    if(scanner.hasNext()){
+      operation = scanner.next().charAt(0);
+    } else {
+      System.out.println("Вы допустили ошибку при вводе операции. Попробуйте еще раз.");
+      scanner.next();//рекурсия
+      operation = getOperation();
+    }
+    return operation;
   }
+
+  public static int calc(int num1, int num2, char operation){
+    int result;
+    switch (operation){
+      case '+':
+        result = num1+num2;
+        break;
+      case '-':
+        result = num1-num2;
+        break;
+      case '*':
+        result = num1*num2;
+        break;
+      case '/':
+        result = num1/num2;
+        break;
+      default:
+        System.out.println("Операция не распознана. Повторите ввод.");
+        result = calc(num1, num2, getOperation());//рекурсия
+    }
+    return result;
+  }
+
 }
-
-/*
-    Calculator calculator = new Calculator();
-    calculator.equals(scanner.nextLine());
-    String val1 = "";
-    String val2 = "";
-    String operation = null;
-    Calculator calc = new Calculator();
-    System.out.println(val1= scanner.nextLine());
-    System.out.println( val2=scanner.nextLine());
-    System.out.println( operation=scanner.nextLine());
-    calc.execute(new String[]{val1, operation, val2});
-
-*/
-
 
 
 
