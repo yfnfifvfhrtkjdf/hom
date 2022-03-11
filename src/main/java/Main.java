@@ -8,16 +8,17 @@ public class Main  {
     Scanner in = new Scanner(System.in);
     System.out.println("операция :");
     String line2 = in.nextLine();
-    System.out.println(line2);
+
+    Scanner in1 = new Scanner(System.in);
     System.out.println("Введите первое число ");
-    String line = in.nextLine();
-    System.out.println(line);
+    String line = in1.nextLine();
+
+    Scanner in2 = new Scanner(System.in);
     System.out.println("Введите второе число :");
-    String line3 = in.nextLine();
-    System.out.println(line3);
+    String line3 = in2.nextLine();
+
    // String s = execute(new String[]{line2, line,line3 });
    // System.out.println(s);
-    System.out.println(line2+" "+line+" "+line3);
     System.out.println("Результат:" + execute(new String[]{line2, line,line3 }));
 
 }

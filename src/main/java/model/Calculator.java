@@ -9,12 +9,12 @@ public class Calculator {
 
     public static String execute(String[] params) {
         int in = 0;
-        System.out.println(params[0]);
+       // System.out.println(params[0]);
         double dou = 0.0;
-        System.out.println(params[1]);
-        System.out.println(params[2]);
+       // System.out.println(params[1]);
+      //  System.out.println(params[2]);
         String res = "";
-        System.out.println(res);
+       // System.out.println(res);
         switch(params[0]) {
             case "+":
                 try {
@@ -26,7 +26,7 @@ public class Calculator {
                     int two = Integer.parseInt(params[2]);
                     in = one + two;
                     res = Integer.toString(in);
-                    System.out.println(res);
+                   // System.out.println(res);
                     break;
                 }catch (Exception e) {
                         throw new CalculatorException();
@@ -38,16 +38,16 @@ public class Calculator {
                     int tw = Integer.parseInt(params[2]);
                     in=on-tw;
                     res=Integer.toString(in);
-                    System.out.println(res);
+                 //   System.out.println(res);
                     break;
                 }else {
                     double a1 = Double.parseDouble(params[1]);
-                    System.out.println(a1);
+                   // System.out.println(a1);
                     double b1 = Double.parseDouble(params[2]);
-                    System.out.println(b1);
+                  //  System.out.println(b1);
                     dou = a1 - b1;
                     res = Double.toString(dou);
-                    System.out.println(dou);
+                  //  System.out.println(dou);
                     break;
                 } }catch (Exception e) {
                         throw new CalculatorException();
@@ -57,12 +57,12 @@ public class Calculator {
                 try {
                     if (params[1].equals("3")||params[2].equals("22") || params[1].equals("22")||params[2].equals("3")){
                         int on = Integer.parseInt(params[1]);
-                        System.out.println(on);
+                     //   System.out.println(on);
                         int tw = Integer.parseInt(params[2]);
-                        System.out.println(tw);
+                       // System.out.println(tw);
                         in=on*tw;
                         res=Integer.toString(in);
-                        System.out.println(res);
+                      //  System.out.println(res);
                         break;
                     }else {
                     double a2 = Double.parseDouble(params[1]);
@@ -70,7 +70,7 @@ public class Calculator {
                     dou = a2 * b2;
                     res = Double.toString(dou);
                    // res=Integer.toString(dou);
-                    System.out.println(res);
+                  //  System.out.println(res);
                     break;
                 }}
                 catch (Exception e) {
