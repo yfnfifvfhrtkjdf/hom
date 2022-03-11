@@ -1,70 +1,47 @@
-
 import model.Calculator;
 
-import java.io.BufferedReader;
-import java.io.Console;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
 import java.util.Scanner;
 
-import static jdk.nashorn.internal.objects.Global.print;
+public class Main extends Calculator {
 
-public class Main {
 
-  public static void main(String[] args) throws ClassNotFoundException, InstantiationException, IllegalAccessException, NoSuchMethodException, InvocationTargetException, IOException {
-      Calculator calculator = new Calculator();
-    Scanner scanner = new Scanner(System.in);
-    calculator.execute(new String[]{scanner.nextLine(), String.valueOf(scanner.hasNextInt()), String.valueOf(scanner.hasNextBoolean())});
- scanner.hasNextInt();
- scanner.hasNextLine();
- scanner.hasNextBoolean();
-int i = scanner.nextInt();
-String s = scanner.nextLine();
-boolean b = scanner.hasNextBoolean();
+  public static void main(String[] args)  {
+    Calculator calculator = new Calculator();
+    Scanner in = new Scanner(System.in);
+    System.out.println("one: ");
+   // System.out.println(calculator.execute(new String[3]));
+    calculator.execute(new String[3]);
+    String s = calculator.execute(new String[0]);
 
-    int code = System.in.read();
-    char c = (char) code;
-    System.out.println("Вы ввели: " + c + ", код символа: " + code);
-    }
+    s = in.nextLine();
+  //  double d = Double.parseDouble(execute(new String[0]));
+  //   d =in.nextDouble();
+    System.out.println("two ");
+    String s1 = calculator.execute(new String[1]);
+    s1 = in.nextLine();
+    String s2 = calculator.execute(new String[2]);
+    s2 = in.nextLine();
+    System.out.println("Результат: "+ execute(new String[]{s,s1,s2}));
+//execute(new String[]{s, s1, s2});
+
+  }
 }
   /*  System.out.println( calculator.execute(ew));
 
-    Scanner in = new Scanner(System.in);
-    System.out.print("Введите число: "+"");
-    String number1 = in.nextLine();
-    System.out.print("Введите число: "+number1);
-    System.out.println(number1);
-    in.toString();
-    System.out.print(" + - или *: ");
-    String mathOperation = in.nextLine();
-    in.toString();
-    System.out.println(mathOperation);
-    System.out.print("Введите число: ");
-    String number2 = in.nextLine();
-    System.out.println(number2);
-    in.toString();
-    System.out.println("Результат:"+ calculator.execute(new String[]{number1,mathOperation,number2}));
+ if (operator.equals("+")) {
+        System.out.println("=" + calculator.execute(new String[]{String.valueOf(one), operator, String.valueOf(two)}));
+      }
+      if (operator.equals("-")) {
+        System.out.println("=" + (one - two));
+      }
+      if (operator.equals("*")) {
+        System.out.println("=" + (one * two));
+      }
+      if (operator.equals("/")) {
+        System.out.println("=" + (one / two));
+      }
   }
 }
-*/
-
-   //
-  //  String st = cal.execute(new  String[]{line});
- //   Calculator.execute(new String[]{});
-
-  //  String line1=in.nextLine();
-  //  String operation=in.nextLine();
-//getline(Calculator.execute(new String[]{getline(getline(line)), getline(line1), getline(operation) }));
-
-
-  //}
- // public static String getline(String li){
- //    li = in.nextLine();
- //   System.out.println(li);
- //   return getline(li);
-
 
 /*
     Calculator calculator = new Calculator();
