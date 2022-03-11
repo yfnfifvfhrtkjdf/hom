@@ -6,12 +6,16 @@ public class Main  {
   public static void main(String[] args) {
     Calculator calculator = new Calculator();
     Scanner in = new Scanner(System.in);
-    System.out.println("Введите первое число ");
-    String line = in.nextLine();
     System.out.println("операция :");
     String line2 = in.nextLine();
+
     System.out.println("Введите второе число :");
     String line3 = in.nextLine();
+
+    System.out.println("Введите первое число ");
+    String line = in.nextLine();
+
+
     System.out.println();
     System.out.println("Результат:" + execute(new String[]{line2, line3, line}));
 
