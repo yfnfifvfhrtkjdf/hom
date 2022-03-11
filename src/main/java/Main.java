@@ -6,18 +6,17 @@ public class Main  {
   static Scanner scanner = new Scanner(System.in);
   public static void main(String[] args) {
     Calculator calculator = new Calculator();
-    int num1 = getInt();
-    int num2 = getInt();
+    double num1 = getInt();
     char operation = getOperation();
-    int result = calc(num1,num2,operation);
+    double num2 = getInt();
+    double result = calc(num1,num2,operation);
     System.out.println("Результат операции: "+result);
-
-    System.out.println(execute(new String[]{String.valueOf(num1), String.valueOf(operation),String.valueOf(num2)}));
+    System.out.println("Результат калькулятора "+execute(new String[]{String.valueOf(operation),String.valueOf(num1),String.valueOf(num2)}));
   }
 
-  public static int getInt(){
+  public static double getInt(){
     System.out.println("Введите число:");
-    int num;
+    double num;
     if(scanner.hasNextInt()){
       num = scanner.nextInt();
     } else {
@@ -41,8 +40,8 @@ public class Main  {
     return operation;
   }
 
-  public static int calc(int num1, int num2, char operation){
-    int result;
+  public static double calc(double num1, double num2, char operation){
+    double result;
     switch (operation){
       case '+':
         result = num1+num2;

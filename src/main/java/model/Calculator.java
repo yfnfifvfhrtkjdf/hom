@@ -92,7 +92,7 @@ public class Calculator {
                 throw new CalculatorException();
             }
             default:
-                   // throw new CalculatorException();
+                    throw new CalculatorException();
                 }
         return res;
     }
