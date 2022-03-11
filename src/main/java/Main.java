@@ -6,18 +6,19 @@ public class Main  {
   public static void main(String[] args) {
     Calculator calculator = new Calculator();
     Scanner in = new Scanner(System.in);
-    System.out.println("операция :");
+   // System.out.println("операция :");
     String line2 = in.nextLine();
 
-    System.out.println("Введите первое число ");
+   // System.out.println("Введите первое число ");
     String line = in.nextLine();
 
-    System.out.println("Введите второе число :");
+   // System.out.println("Введите второе число :");
     String line3 = in.nextLine();
 
    // String s = execute(new String[]{line2, line,line3 });
    // System.out.println(s);
-    System.out.println("Результат:" + execute(new String[]{line2, line,line3 }));
+    System.out.println(execute(new String[]{line2, line,line3 }));
+   // execute(new String[]{line2, line,line3 });
 
 }
 }
