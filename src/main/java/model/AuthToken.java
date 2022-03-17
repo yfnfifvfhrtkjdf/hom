@@ -2,8 +2,10 @@ package model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.google.gson.annotations.SerializedName;
+import io.restassured.authentication.AuthenticationScheme;
+import io.restassured.internal.http.HTTPBuilder;
 
-public class AuthToken {
+public class AuthToken  {
     // todo: serialized поля, согласно swagger, а также геттеры и сеттеры
 
     @SerializedName("username")
@@ -13,7 +15,6 @@ public class AuthToken {
     private String password;
     @JsonIgnore
     private String token;
-
 
     public void setToken(String token) {
         this.token =  token;
@@ -31,6 +32,15 @@ public class AuthToken {
         return username;
     }
 
+    @Override
+    public String toString() {
+        return "AuthToken{" +
+                "username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", token='" + token + '\'' +
+                '}';
+    }
+
     public void setPassword(String password) {
         this.password = password;
     }
@@ -38,6 +48,5 @@ public class AuthToken {
     public String getPassword() {
         return password;
     }
-
 
 }

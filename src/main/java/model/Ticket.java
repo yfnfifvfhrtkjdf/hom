@@ -10,6 +10,29 @@ public class Ticket {
 
     // todo: serialized поля, геттеры и сеттеры
 
+    @Override
+    public String toString() {
+        return "Ticket{" +
+                "queue=" + queue +
+                ", title='" + title + '\'' +
+                ", priority=" + priority +
+                ", status=" + status +
+                ", id=" + id +
+                ", due_date='" + due_date + '\'' +
+                ", description='" + description + '\'' +
+                ", submitter_email='" + submitter_email + '\'' +
+                ", assigned_to='" + assigned_to + '\'' +
+                ", created='" + created + '\'' +
+                ", modified='" + modified + '\'' +
+                ", on_hold=" + on_hold +
+                ", resolution='" + resolution + '\'' +
+                ", last_escalation='" + last_escalation + '\'' +
+                ", secret_key='" + secret_key + '\'' +
+                ", kbitem=" + kbitem +
+                ", merged_to=" + merged_to +
+                '}';
+    }
+
     @SerializedName("queue")
     private Integer queue;
     public void setQueue(Integer queue) {
@@ -48,10 +71,11 @@ public class Ticket {
 
 
 
-    @JsonIgnore
+    @SerializedName("id")
     private Integer id;
     public Integer getId() {return id;}
-    public void setId(Integer id) {this.id = id;}
+    public Integer setId(Integer id) {this.id = id;
+    return id;}
 
     @JsonIgnore
         private String due_date;
@@ -161,20 +185,11 @@ public class Ticket {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Ticket ticket = (Ticket) o;
-        return title.equals(ticket.title) &&
-                queue.equals(ticket.queue) &&
-                Objects.equals(status, ticket.status) &&
-                Objects.equals(priority, ticket.priority) &&
-                Objects.equals(description, ticket.description) &&
-                Objects.equals(due_date, ticket.due_date) &&
-                Objects.equals(submitter_email, ticket.submitter_email) &&
-                Objects.equals(kbitem, ticket.kbitem);
-
+        return Objects.equals(queue, ticket.queue) && Objects.equals(title, ticket.title) && Objects.equals(priority, ticket.priority) && Objects.equals(status, ticket.status) && Objects.equals(id, ticket.id) && Objects.equals(due_date, ticket.due_date) && Objects.equals(description, ticket.description) && Objects.equals(submitter_email, ticket.submitter_email) && Objects.equals(assigned_to, ticket.assigned_to) && Objects.equals(created, ticket.created) && Objects.equals(modified, ticket.modified) && Objects.equals(on_hold, ticket.on_hold) && Objects.equals(resolution, ticket.resolution) && Objects.equals(last_escalation, ticket.last_escalation) && Objects.equals(secret_key, ticket.secret_key) && Objects.equals(kbitem, ticket.kbitem) && Objects.equals(merged_to, ticket.merged_to);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(title, queue, status, priority, description, due_date, submitter_email, kbitem);
+        return Objects.hash(queue, title, priority, status, id, due_date, description, submitter_email, assigned_to, created, modified, on_hold, resolution, last_escalation, secret_key, kbitem, merged_to);
     }
-
-    }
+}

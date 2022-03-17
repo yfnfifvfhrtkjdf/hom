@@ -1,18 +1,9 @@
 package api;
-;
-import io.restassured.http.ContentType;
-import io.restassured.http.Header;
-import model.Status;
+import model.AuthToken;
 import model.Ticket;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
-import java.util.Random;
-
 import static net.serenitybdd.rest.SerenityRest.given;
-import static org.assertj.core.api.Assertions.assertThat;
-
-
 
 /** Создание и проверка тикета */
 public class CreateTicketTest extends BaseTest {
@@ -20,19 +11,45 @@ public class CreateTicketTest extends BaseTest {
     @Test
     // todo: создать тикет и проверить, что он находится в системе
     public void createTicketTest() {
-         createTicket(buildNewTicket(Status.OPEN, 1));
-        getTicket(2368);
+        Ticket ticket = new Ticket();
+        int queue = 2;
+        String title = "title";
+        ticket.setTitle(title);
+        ticket.setQueue(queue);
+        ticket.setPriority(1);
+        ticket.setStatus(1);
+        AuthToken authToken =new  AuthToken();
+        authToken.setToken(System.getProperty("token"));
+        ticket = given()
+                .body(ticket)
+                .when()
+                .post("/api/tickets")
+                .then()
+                .statusCode(201)
+                .extract().body()
+                .as(Ticket.class);
+
+      Ticket actual=  given()
+              .header("Authorization", "token " + authToken.getToken())
+                .pathParam("id", ticket.getId())
+                .when()
+                .get("/api/tickets/{id}")
+                .then().statusCode(200)
+                .extract().as(Ticket.class);
+        Assert.assertEquals(ticket.getId(), actual.getId(), "значения не равны");
     }
 
     protected int getTicket(int id) {
-        Ticket ticket =  new Ticket();
-             given()
-                        .pathParam("id", id)
-                        .when().get("/api/searches/{id}")
-                        .then()
-                        .statusCode(200)
-             .extract().as(Ticket.class);
-      return getTicket(id);
+        AuthToken authToken =new  AuthToken();
+        authToken.setToken(System.getProperty("token"));
+         given()
+                 .header("Authorization", "token " + authToken.getToken())
+                 .pathParam("id", id)
+                 .when()
+                 .get("/api/tickets/{id}")
+                 .then().statusCode(200)
+                 .extract().as(Ticket.class);
+      return 0;
         // todo: отправить hTTP запрос на получение тикета по его id
     }
 }
