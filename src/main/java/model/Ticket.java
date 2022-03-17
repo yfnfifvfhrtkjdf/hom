@@ -180,6 +180,7 @@ public class Ticket {
         this.merged_to = merged_to;
     }
 
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

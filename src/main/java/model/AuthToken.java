@@ -16,6 +16,7 @@ public class AuthToken  {
     @JsonIgnore
     private String token;
 
+
     public void setToken(String token) {
         this.token =  token;
     }

@@ -8,6 +8,7 @@ import static net.serenitybdd.rest.SerenityRest.given;
 /** Создание и проверка тикета */
 public class CreateTicketTest extends BaseTest {
 
+
     @Test
     // todo: создать тикет и проверить, что он находится в системе
     public void createTicketTest() {
