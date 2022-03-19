@@ -51,6 +51,11 @@
             <artifactId>serenity-maven-plugin</artifactId>
             <version>3.2.1-RC1</version>
         </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>LATEST</version>
+        </dependency>
 
     </dependencies>
 
