@@ -2,6 +2,7 @@ package api;
 import model.AuthToken;
 import model.Status;
 import model.Ticket;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import static net.serenitybdd.rest.SerenityRest.given;
 
@@ -11,6 +12,7 @@ public class CreateTicketTest extends BaseTest {
     public void createTicketTest() {
         Ticket ticket = createTicket(buildNewTicket(Status.OPEN, 1));
         getTicket(ticket.getId());
+        Assert.assertEquals(ticket.getId(), getTicket(ticket.getId()), "не равны");
     }
 
     protected int getTicket(int id) {
@@ -22,7 +24,7 @@ public class CreateTicketTest extends BaseTest {
                 .get("/api/tickets/{id}")
                 .then().statusCode(200)
                 .extract().as(Ticket.class);
-        return 0;
+        return id;
     }
 }
 

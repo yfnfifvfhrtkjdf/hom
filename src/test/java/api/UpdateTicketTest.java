@@ -9,8 +9,10 @@ import static net.serenitybdd.rest.SerenityRest.*;
 public class UpdateTicketTest extends  BaseTest {
     @Test
     public void updateTicketTest() throws IOException {
-        Ticket ticket = createTicket(buildNewTicket(Status.CLOSED, 1));
-        updateTicketNegative(ticket);
+
+           Ticket ticket = createTicket(buildNewTicket(Status.CLOSED, 1));
+           updateTicketNegative(ticket);
+
     }
 
     private void updateTicketNegative(Ticket ticket) {
@@ -23,5 +25,6 @@ public class UpdateTicketTest extends  BaseTest {
                 .when().put("/api/tickets/{ticket_id}")
                 .then().statusCode(422)
                 .extract().as(Ticket.class);
+
     }
 }
