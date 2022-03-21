@@ -47,7 +47,6 @@ public class TicketPage extends HelpdeskBasePage {
     }
 
     /** Получить имя тикета */
-    @Step("Получить имя тикета")
     public String getTicketTitle() {
         return ticketTitle.getText();
     }
