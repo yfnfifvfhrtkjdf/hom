@@ -1,8 +1,8 @@
 package pages;
+import io.qameta.allure.Attachment;
+import io.qameta.allure.Step;
 import models.Ticket;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
@@ -45,8 +45,7 @@ public class CreateTicketPage extends HelpdeskBasePage {
         PageFactory.initElements(driver, this);
     }
 
-
-    /** Создание тикета */
+    @Step("Заполнение тикета")
     public void createTicket(Ticket ticket) {
         setProblemTitle(ticket.getTitle());
         setDescriptionIssue(ticket.getDescription());
@@ -54,6 +53,7 @@ public class CreateTicketPage extends HelpdeskBasePage {
         setQueue(ticket.getQueue());
         setPriority(ticket.getPriority());
         setEmail(ticket.getSubmitter_email());
+        screenshot();
         createTicket();
     }
 
@@ -92,11 +92,17 @@ public class CreateTicketPage extends HelpdeskBasePage {
     public void setAssigned_to(String text){
         Assigned_to.sendKeys(text);
     }
-
+    @Step("Нажать кнопку 'создать тикет'")
     public void createTicket() {
         {
             SubmitTicket.click();
+
         }
+    }
+
+    @Attachment(value = "Attachment Screenshot", type = "image/png")
+    public byte[] screenshot() {
+        return ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
     }
 }
 

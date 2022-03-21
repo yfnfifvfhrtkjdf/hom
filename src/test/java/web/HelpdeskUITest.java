@@ -1,5 +1,6 @@
 package web;
-
+import io.qameta.allure.Epic;
+import io.qameta.allure.Step;
 import models.Ticket;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -10,9 +11,8 @@ import org.testng.annotations.Test;
 import pages.*;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
-
-import static io.restassured.RestAssured.baseURI;
-
+//import static io.restassured.RestAssured.baseURI;
+@Epic("Главное меню")
 public class HelpdeskUITest {
     private WebDriver driver;
     private Ticket ticket;
@@ -21,7 +21,6 @@ public class HelpdeskUITest {
     public void setup() throws IOException {
         System.getProperties().load(ClassLoader.getSystemResourceAsStream("config.properties"));
         System.getProperties().load(ClassLoader.getSystemResourceAsStream("user.properties"));
-        baseURI=System.getProperty("site.url");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -32,7 +31,7 @@ public class HelpdeskUITest {
     public void createTicketTest() throws InterruptedException {
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         MainPage main = new MainPage();
-        driver.get(baseURI);
+        driver.get("https://at-sandbox.workbench.lanit.ru/");
         CreateTicketPage newTicket = new  CreateTicketPage(driver);
         main.mainMenu().newTicket();
         ticket = buildNewTicket();
@@ -56,7 +55,7 @@ public class HelpdeskUITest {
 
     protected Ticket buildNewTicket() {
         Ticket ticket = new Ticket();
-        ticket.setTitle("OOOOOOOPS");
+        ticket.setTitle("WOOOW");
         ticket.setDescription("PROBLEM");
         ticket.setDue_date("7");
         ticket.setPriority(5);
