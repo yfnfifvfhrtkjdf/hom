@@ -3,7 +3,7 @@
 <suite name="suite" allow-return-values="true" verbose="1" data-provider-thread-count="4">
     <test name="test">
         <classes>
-            <class name="RunnTicketTest"/>
+            <class name="Runner"/>
         </classes>
     </test>
 </suite>

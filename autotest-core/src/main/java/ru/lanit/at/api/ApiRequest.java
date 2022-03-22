@@ -126,11 +126,5 @@ public class ApiRequest {
     private void addLoggingListener() {
         builder.addFilter(new RestAssuredCustomLogger());
     }
-
-    public void setPatch(Map<String, String> patch) {
-        patch.forEach((k, v) -> {
-            builder.addPathParam(k, v);
-        });
-    }
 }
 

@@ -127,5 +127,4 @@ public class WebCheckSteps {
     public void currentUrlContainsExpected(String url) {
         WebChecks.urlContains(url);
     }
-
 }

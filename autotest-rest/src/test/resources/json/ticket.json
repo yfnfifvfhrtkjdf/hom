@@ -1,7 +1,0 @@
-{
-"queue": "${queue}",
-"title": "${title}",
-"priority": "${priority}",
-"status": "${status}"
-
-}

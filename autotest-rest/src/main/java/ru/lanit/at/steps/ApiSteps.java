@@ -43,12 +43,6 @@ public class ApiSteps {
         dataTable.asLists().forEach(it -> query.put(it.get(0), it.get(1)));
         apiRequest.setQuery(query);
     }
-    @И("добавить patch параметры")
-    public void addPatch(DataTable dataTable) {
-        Map<String, String> patch = new HashMap<>();
-        dataTable.asLists().forEach(it -> patch.put(it.get(0), it.get(1)));
-        apiRequest.setPatch(patch);
-    }
 
     @И("отправить запрос")
     public void send() {

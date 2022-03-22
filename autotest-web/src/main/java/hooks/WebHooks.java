@@ -55,9 +55,9 @@ public class WebHooks {
         Environment.initPages(cfg.pagesPackage());
     }
 
-//    @After
-//    public void close() {
-//        WebDriverRunner.closeWebDriver();
-//        Environment.demountDriver();
-//    }
+    @After
+    public void close() {
+        WebDriverRunner.closeWebDriver();
+        Environment.demountDriver();
+    }
 }
