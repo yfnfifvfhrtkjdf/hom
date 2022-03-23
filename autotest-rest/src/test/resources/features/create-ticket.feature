@@ -35,13 +35,13 @@
     | ${token}       | != | null  |
 
   * создать запрос
-    | method | path          |
+    | method | path              |
     | GET    |/api/tickets/${id1}|
 
   * добавить header
     | Accept        |application/json, application/javascript, text/javascript, text/json|
     | Content-Type  | application/json |
-    | Authorization |token c1803e6e3b12359683796496625e8518b2e082c3|
+    | Authorization |token ${token}|
 
   * отправить запрос
   * статус код 200
