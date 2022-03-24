@@ -2,7 +2,9 @@ package actions;
 
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.Assert;
@@ -10,6 +12,8 @@ import ru.lanit.at.utils.ErrorMessage;
 import ru.lanit.at.utils.Sleep;
 import ru.lanit.at.web.pagecontext.Environment;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,6 +22,15 @@ public class WebActions {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(WebActions.class);
     private static final WebDriver DRIVER = Environment.getDriver();
+
+
+    public static void file (){
+        File file = new File("src/main/resources/photo.png");
+        String catalog =file.getAbsolutePath();
+        System.out.println(catalog);
+        WebElement El = DRIVER.findElement(By.xpath("//input[@type='file']"));
+         El.sendKeys(catalog);
+    }
 
     /**
      * Открывает ссылку по переданному url и переводит контекст драйвера на новое окно

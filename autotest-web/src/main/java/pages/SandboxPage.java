@@ -27,7 +27,7 @@ public class SandboxPage extends WebPage {
     private SelenideElement ticketTable = $x("//table[@id='ticketTable']");
 
     @Name("Отправить тикет")
-    private SelenideElement createTicket = $x("//*[@id='content-wrapper']/div/div/div/div[2]/form/button");
+    private SelenideElement createTicket = $x("//*[@class='btn btn-primary btn-lg btn-block']");
 
     @Name("Новый Тикет")
     private SelenideElement newTicketSidebar = $x("//a[@href='/tickets/submit/']");
@@ -48,16 +48,16 @@ public class SandboxPage extends WebPage {
     private SelenideElement submitterEmail = $x("//*[@id='id_submitter_email']");
 
     @Name("Изменить тикет")
-    private SelenideElement editTicket = $x ("//*[@id='content-wrapper']/div/div[1]/div/div/a/button");
+    private SelenideElement editTicket = $x ("//*[@class='btn btn-sm btn-warning float-right']");
 
     @Name("Прикрепить файлы")
     private SelenideElement file= $x ("//*[@id='ShowFileUpload']");
 
     @Name("Добавить файлы")
-    private SelenideElement file1= $x ("//*[@id='FileUpload']/dl/dd/div/div/label");
+    private SelenideElement file1= $x ("//*[@class='btn btn-warning btn-sm']");
 
     @Name("Обновить тикет")
-    private SelenideElement sub= $x ("//*[@id='content-wrapper']/div/div[3]/div[2]/form/button");
+    private SelenideElement sub= $x ("//*[@class='btn btn-primary float-right']");
 
     @Name("Статус")
     private SelenideElement status= $x ("//*[@id='st_closed']");
@@ -66,10 +66,10 @@ public class SandboxPage extends WebPage {
     private SelenideElement search = $x ("//*[@id='search_query']");
 
     @Name("ПоискGO")
-    private SelenideElement searchGo = $x ("//*[@id='searchform']/div/div/button");
+    private SelenideElement searchGo = $x ("//*[@class='input-group-append']");
 
     @Name("Сохранить запрос")
-    private SelenideElement zapros = $x ("//*[@id='headingTwo']/h5/button");
+    private SelenideElement zapros = $x ("//*[@class='btn btn-link btn-sm']");
 
     @Name("Найденный тикет")
     private SelenideElement tiketTitle = $x ("//div[@class='tickettitle']/a");
@@ -78,10 +78,10 @@ public class SandboxPage extends WebPage {
     private SelenideElement searchZapros = $x("//*[@id='ticketsDropdown']");
 
     @Name("Название запроса")
-    private SelenideElement text = $x ("//*[@id='id_title']");
+    private SelenideElement text = $x ("//*[@id='search_query']");
 
     @Name("Кнопка сохранения запроса")
-    private SelenideElement buttonSearch = $x ("//*[@id='collapseTwo']/div/form/div/input");
+    private SelenideElement buttonSearch = $x ("//*[@aria-controls='collapseTwo']");
 
     @Name("Скролл")
     private SelenideElement scroll = $x ( "//*[@id='wrapper']/ul/li[3]/div/a[61]");

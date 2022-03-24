@@ -24,7 +24,7 @@ public class WebCheckSteps {
      */
     @Когда("на странице присутствует текст {string}")
     public void textAppearOnThePage(String text) {
-        WebChecks.textVisibleOnPage(text, null);
+        WebChecks.textVisibleOnPage(text, 3);
         LOGGER.info("на странице '{}' имеется текст '{}'", pageManager.getCurrentPage().name(), text);
     }
 

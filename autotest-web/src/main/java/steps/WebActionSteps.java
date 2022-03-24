@@ -1,5 +1,6 @@
 package steps;
 
+import actions.WebActions;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selectors;
 import com.codeborne.selenide.SelenideElement;
@@ -71,6 +72,11 @@ public class WebActionSteps {
         element.shouldBe(Condition.visible)
                 .scrollIntoView("{block: 'center'}");
         LOGGER.info("скролл страницы до текста '{}'", text);
+    }
+
+    @И("вложение")
+    public void file1 (){
+        WebActions.file();
     }
 
     @И("подождать {int} сек")
