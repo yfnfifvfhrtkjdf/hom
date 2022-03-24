@@ -13,7 +13,6 @@ import ru.lanit.at.utils.Sleep;
 import ru.lanit.at.web.pagecontext.Environment;
 
 import java.io.File;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,8 +27,8 @@ public class WebActions {
         File file = new File("src/main/resources/photo.png");
         String catalog =file.getAbsolutePath();
         System.out.println(catalog);
-        WebElement El = DRIVER.findElement(By.xpath("//input[@type='file']"));
-         El.sendKeys(catalog);
+        WebElement element = DRIVER.findElement(By.xpath("//input[@type='file']"));
+         element.sendKeys(catalog);
     }
 
     /**
